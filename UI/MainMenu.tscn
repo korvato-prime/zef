@@ -1,0 +1,346 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Gridmap/MeshLibrary.meshlib" type="MeshLibrary" id=1]
+[ext_resource path="res://Fonts/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://UI/MainMenu.gd" type="Script" id=3]
+[ext_resource path="res://UI/MainMenu.tres" type="Theme" id=4]
+[ext_resource path="res://Textures/forbiden_fruit.png" type="Texture" id=5]
+[ext_resource path="res://Textures/demon.png" type="Texture" id=6]
+[ext_resource path="res://UI/OptionsPanel.gd" type="Script" id=7]
+
+[sub_resource type="Environment" id=1]
+background_mode = 3
+
+[sub_resource type="Animation" id=2]
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 35.875, 31.293, 34.338 ), Vector3( 35.875, 31.293, 35.05 ), Vector3( 35.875, 31.293, 34.338 ) ]
+}
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 2 )
+
+[node name="MainMenu" type="Spatial"]
+script = ExtResource( 3 )
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource( 1 )
+data = {
+"cells": PoolIntArray( 5, 65535, 0, 11, 65535, 0, 65535, 65535, 0, 65536, 65535, 0, 65541, 65535, 0, 65547, 65535, 0, 131073, 65535, 0, 131077, 65535, 0, 131078, 65535, -536870912, 131079, 65535, 0, 131080, 65535, 0, 131083, 65535, 0, 131084, 65535, 0, 131085, 65535, 0, 196610, 65535, 0, 196613, 65535, 0, 196619, 65535, 0, 262147, 65535, 0, 262149, 65535, 1073741824, 262155, 65535, 0, 327680, 65535, 0, 327681, 65535, 0, 327682, 65535, 0, 327683, 65535, 0, 327685, 65535, 0, 327686, 65535, 0, 327687, 65535, 0, 327688, 65535, 0, 327689, 65535, 0, 327691, 65535, 0, 327692, 65535, 0, 327693, 65535, 0, 327694, 65535, 0, 327695, 65535, 0, 393215, 65535, 0, -65536, 65535, 0, -65535, 65535, 0, -65534, 65535, 0, -65533, 65535, 0, -65531, 65535, 0, -65530, 65535, 0, -65529, 65535, 0, -65528, 65535, 0, -65527, 65535, 0, -65525, 65535, 0, -1, 65535, 0 )
+}
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_floor_": Vector3( 11, 5, 0 )
+}
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 1 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.863854, -0.271756, 0.424152, 0, 0.842002, 0.539474, -0.503743, -0.466027, 0.727366, 35.875, 31.293, 34.4398 )
+projection = 1
+size = 30.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Title@Movement"
+anims/Title@Movement = SubResource( 2 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.55371
+margin_top = -0.594604
+margin_right = 4.55371
+margin_bottom = -0.594604
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits" type="RichTextLabel" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -80.0
+margin_top = -40.0
+margin_right = 80.0
+custom_fonts/normal_font = SubResource( 3 )
+custom_colors/default_color = Color( 0.996078, 1, 0, 1 )
+text = "A game by Corvato"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 52.9731
+margin_top = -150.378
+margin_right = 160.973
+margin_bottom = -42.3784
+theme = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TutorialButton" type="Button" parent="CanvasLayer/Control/VBoxContainer"]
+margin_right = 107.0
+margin_bottom = 21.0
+text = "TUTORIAL"
+
+[node name="StartButton" type="Button" parent="CanvasLayer/Control/VBoxContainer"]
+margin_top = 25.0
+margin_right = 107.0
+margin_bottom = 46.0
+text = "START"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OptionsButton" type="Button" parent="CanvasLayer/Control/VBoxContainer"]
+margin_top = 50.0
+margin_right = 107.0
+margin_bottom = 71.0
+text = "OPTIONS"
+
+[node name="ExitButton" type="Button" parent="CanvasLayer/Control/VBoxContainer"]
+margin_top = 75.0
+margin_right = 107.0
+margin_bottom = 96.0
+text = "EXIT"
+
+[node name="TutorialPanel" type="Panel" parent="CanvasLayer/Control"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -250.0
+margin_right = 200.0
+margin_bottom = 250.0
+theme = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Label" type="RichTextLabel" parent="CanvasLayer/Control/TutorialPanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -168.0
+margin_top = -54.5
+margin_right = 166.0
+margin_bottom = 164.5
+text = "This is the interdimensional FORBIDDEN FRUIT, there are 4, one in each level, grab them to escape interdimensional Limbo before the evil traps you forever. Every room has its own logic.
+Your character can move. Your character can sometimes jump. Jumping can have side effects if you look at your feet. The camera is OP. And if you cowardly try to escape this game challenges, you will not have no options."
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer/Control/TutorialPanel"]
+position = Vector2( 192.434, 93.5444 )
+texture = ExtResource( 5 )
+
+[node name="TutorialReturn" type="Button" parent="CanvasLayer/Control/TutorialPanel"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -92.0
+margin_top = -46.0
+margin_right = -26.0
+margin_bottom = -25.0
+text = "RETURN"
+
+[node name="OptionsPanel" type="Panel" parent="CanvasLayer/Control"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -200.0
+margin_right = 200.0
+margin_bottom = 200.0
+theme = ExtResource( 4 )
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/OptionsPanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -81.0
+margin_right = 100.0
+margin_bottom = 81.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/OptionsPanel/VBoxContainer"]
+margin_right = 200.0
+margin_bottom = 16.0
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/OptionsPanel/VBoxContainer/HBoxContainer"]
+margin_right = 117.0
+margin_bottom = 15.0
+text = "MASTER VOLUME"
+
+[node name="MasterSlider" type="HSlider" parent="CanvasLayer/Control/OptionsPanel/VBoxContainer/HBoxContainer"]
+margin_left = 121.0
+margin_right = 200.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+min_value = -40.0
+max_value = 0.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/Control/OptionsPanel/VBoxContainer"]
+margin_top = 20.0
+margin_right = 200.0
+margin_bottom = 36.0
+size_flags_horizontal = 3
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/OptionsPanel/VBoxContainer/HBoxContainer2"]
+margin_right = 90.0
+margin_bottom = 15.0
+text = "SFX VOLUME"
+
+[node name="SFXSlider" type="HSlider" parent="CanvasLayer/Control/OptionsPanel/VBoxContainer/HBoxContainer2"]
+margin_left = 94.0
+margin_right = 200.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+min_value = -40.0
+max_value = 0.0
+rounded = true
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="CanvasLayer/Control/OptionsPanel/VBoxContainer"]
+margin_top = 40.0
+margin_right = 200.0
+margin_bottom = 56.0
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/OptionsPanel/VBoxContainer/HBoxContainer3"]
+margin_right = 108.0
+margin_bottom = 15.0
+text = "MUSIC VOLUME"
+
+[node name="MusicSlider" type="HSlider" parent="CanvasLayer/Control/OptionsPanel/VBoxContainer/HBoxContainer3"]
+margin_left = 112.0
+margin_right = 200.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+min_value = -40.0
+max_value = 0.0
+rounded = true
+
+[node name="FullscreenCheckBox" type="CheckBox" parent="CanvasLayer/Control/OptionsPanel/VBoxContainer"]
+margin_top = 60.0
+margin_right = 200.0
+margin_bottom = 84.0
+text = "FULLSCREEN"
+
+[node name="CheckBox2" type="CheckBox" parent="CanvasLayer/Control/OptionsPanel/VBoxContainer"]
+margin_top = 88.0
+margin_right = 200.0
+margin_bottom = 112.0
+text = "BORDERLESS"
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/OptionsPanel/VBoxContainer"]
+margin_top = 116.0
+margin_right = 200.0
+margin_bottom = 131.0
+text = "RESOLUTION:"
+
+[node name="OptionButton" type="OptionButton" parent="CanvasLayer/Control/OptionsPanel/VBoxContainer"]
+margin_top = 135.0
+margin_right = 200.0
+margin_bottom = 156.0
+text = "1920*1080"
+align = 1
+items = [ "1920*1080", null, false, 0, null, "Save money", null, false, 1, null, "Work on side project", null, false, 2, null, "Leave toxic ex", null, false, 3, null, "Quit job", null, false, 4, null, "Travel very far", null, false, 5, null ]
+selected = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="CanvasLayer/Control/OptionsPanel/VBoxContainer"]
+margin_top = 160.0
+margin_right = 200.0
+margin_bottom = 181.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer/Control/OptionsPanel/VBoxContainer/HBoxContainer4"]
+position = Vector2( -15.1774, 8.20987 )
+texture = ExtResource( 6 )
+
+[node name="Button" type="Button" parent="CanvasLayer/Control/OptionsPanel/VBoxContainer/HBoxContainer4"]
+margin_left = 13.0
+margin_right = 187.0
+margin_bottom = 21.0
+disabled = true
+text = "CONFIGURE CONTROLS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="CanvasLayer/Control/OptionsPanel"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -79.3635
+margin_top = -39.7089
+margin_right = -13.3635
+margin_bottom = -18.7089
+text = "RETURN"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/TutorialButton" to="." method="_on_TutorialButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/OptionsButton" to="." method="_on_OptionsButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/ExitButton" to="." method="_on_ExitButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/TutorialPanel/TutorialReturn" to="." method="_on_TutorialReturn_pressed"]
+[connection signal="value_changed" from="CanvasLayer/Control/OptionsPanel/VBoxContainer/HBoxContainer/MasterSlider" to="." method="_on_MasterSlider_value_changed"]
+[connection signal="value_changed" from="CanvasLayer/Control/OptionsPanel/VBoxContainer/HBoxContainer2/SFXSlider" to="." method="_on_SFXSlider_value_changed"]
+[connection signal="value_changed" from="CanvasLayer/Control/OptionsPanel/VBoxContainer/HBoxContainer3/MusicSlider" to="." method="_on_MusicSlider_value_changed"]
+[connection signal="pressed" from="CanvasLayer/Control/OptionsPanel/VBoxContainer/FullscreenCheckBox" to="CanvasLayer/Control/OptionsPanel" method="_on_FullscreenCheckBox_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/OptionsPanel/VBoxContainer/CheckBox2" to="CanvasLayer/Control/OptionsPanel" method="_on_CheckBox2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/OptionsPanel/Button2" to="." method="_on_Button2_pressed"]

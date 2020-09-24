@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=2]
+
+[sub_resource type="SpatialMaterial" id=22]
+roughness = 0.14
+emission_enabled = true
+emission = Color( 1, 0.980392, 0, 1 )
+emission_energy = 4.63
+emission_operator = 0
+emission_on_uv2 = false
+
+[sub_resource type="SphereMesh" id=23]
+material = SubResource( 22 )
+
+[sub_resource type="SphereShape" id=24]
+
+[node name="MagicSphere" type="MeshInstance"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.83276, 1.14309, -5.86456 )
+mesh = SubResource( 23 )
+material/0 = null
+
+[node name="SphereCollider" type="Area" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="SphereCollider"]
+shape = SubResource( 24 )

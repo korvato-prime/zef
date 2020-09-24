@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/PUZZLESOLVED.wav-9549596f5b4c34693c35c07317c1a948.sample"
+
+[deps]
+
+source_file="res://SFX/PUZZLESOLVED.wav"
+dest_files=[ "res://.import/PUZZLESOLVED.wav-9549596f5b4c34693c35c07317c1a948.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

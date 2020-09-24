@@ -1,0 +1,181 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Gridmap/MeshLibrary.meshlib" type="MeshLibrary" id=1]
+[ext_resource path="res://Zef/Crosshair.png" type="Texture" id=2]
+[ext_resource path="res://Interactables/FakeGridmap.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Fonts/m5x7.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Zef/FPTestPlayer.gd" type="Script" id=5]
+[ext_resource path="res://Rooms/Room04.gd" type="Script" id=6]
+[ext_resource path="res://SFX/limbo.wav" type="AudioStream" id=7]
+
+[sub_resource type="Environment" id=1]
+background_mode = 3
+
+[sub_resource type="CapsuleShape" id=2]
+radius = 0.75
+height = 1.25
+
+[sub_resource type="CapsuleMesh" id=3]
+radius = 0.75
+mid_height = 1.25
+
+[sub_resource type="DynamicFont" id=4]
+size = 30
+font_data = ExtResource( 4 )
+
+[sub_resource type="SpatialMaterial" id=5]
+roughness = 0.14
+emission_enabled = true
+emission = Color( 1, 0.980392, 0, 1 )
+emission_energy = 4.63
+emission_operator = 0
+emission_on_uv2 = false
+
+[sub_resource type="SphereMesh" id=6]
+material = SubResource( 5 )
+
+[sub_resource type="SphereShape" id=7]
+
+[node name="Room04" type="Spatial"]
+script = ExtResource( 6 )
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource( 1 )
+data = {
+"cells": PoolIntArray( 0, 0, 0, 1, 0, 0, 4, 0, 0, 5, 0, 0, 65536, 0, 0, 65537, 0, 0, 65540, 0, 0, 65541, 0, 0, 131072, 0, 0, 131073, 0, 0, 131076, 0, 0, 131077, 0, 0, -65536, 0, 0, -65535, 0, 536870912, -65534, 0, 1, -65533, 0, 1, -65532, 0, 0, -65531, 0, 0, 0, 1, 0, 5, 1, 0, 65536, 1, 0, 65541, 1, 0, 131072, 1, 0, 131077, 1, 0, -65536, 1, 0, -65535, 1, 1, -65534, 1, 1, -65533, 1, 1, -65532, 1, 1, -65531, 1, 0, 0, 2, 0, 5, 2, 0, 65536, 2, 0, 65541, 2, 0, 131072, 2, 0, 131077, 2, 0, -65536, 2, 536870912, -65535, 2, 1, -65534, 2, 1, -65533, 2, 1, -65532, 2, 1, -65531, 2, 0, 0, 3, 0, 5, 3, 0, 65536, 3, 1073741824, 65541, 3, 0, 131072, 3, 0, 131077, 3, 0, -65536, 3, 0, -65535, 3, 1, -65534, 3, 1, -65533, 3, 1, -65532, 3, 1, -65531, 3, 0, 0, 4, 0, 5, 4, 0, 65536, 4, 0, 65541, 4, 0, 131072, 4, 0, 131077, 4, 0, -65536, 4, 0, -65535, 4, 1, -65534, 4, 1, -65533, 4, 1, -65532, 4, 1, -65531, 4, 0, 0, 5, 0, 5, 5, 0, 65536, 5, 0, 65541, 5, 0, 131072, 5, 0, 131077, 5, 0, -65536, 5, 0, -65535, 5, 1, -65534, 5, 1, -65533, 5, 1, -65532, 5, 1, -65531, 5, 0, 0, 6, 0, 1, 6, 0, 2, 6, 0, 3, 6, 0, 4, 6, 0, 5, 6, 0, 65536, 6, 0, 65537, 6, 0, 65538, 6, 0, 65539, 6, 1073741824, 65540, 6, 0, 65541, 6, 536870912, 131072, 6, 0, 131073, 6, 0, 131074, 6, 0, 131075, 6, 0, 131076, 6, 0, 131077, 6, 0, -65536, 6, 0, -65535, 6, 0, -65534, 6, 0, -65533, 6, 0, -65532, 6, 0, -65531, 6, 0, 0, 65527, 0, 1, 65527, 0, 2, 65527, 0, 3, 65527, 0, 4, 65527, 536870912, 5, 65527, 0, 65536, 65527, 0, 65537, 65527, 0, 65538, 65527, 0, 65539, 65527, 0, 65540, 65527, 0, 65541, 65527, 0, 131072, 65527, 0, 131073, 65527, 0, 131074, 65527, 0, 131075, 65527, 0, 131076, 65527, 0, 131077, 65527, 536870912, -65536, 65527, 0, -65535, 65527, 536870912, -65534, 65527, 0, -65533, 65527, 0, -65532, 65527, 0, -65531, 65527, 0, 0, 65528, 0, 5, 65528, 0, 65536, 65528, 0, 65541, 65528, 0, 131072, 65528, 0, 131077, 65528, 0, -65536, 65528, 0, -65535, 65528, 1, -65534, 65528, 1, -65533, 65528, 1, -65532, 65528, 1, -65531, 65528, 0, 0, 65529, 0, 5, 65529, 0, 65536, 65529, 0, 65541, 65529, 0, 131072, 65529, 0, 131077, 65529, 0, -65536, 65529, 0, -65535, 65529, 1, -65534, 65529, 1, -65533, 65529, 1, -65532, 65529, 1, -65531, 65529, 0, 0, 65530, 0, 5, 65530, 0, 65536, 65530, 536870912, 65541, 65530, 0, 131072, 65530, 0, 131077, 65530, 0, -65536, 65530, 0, -65535, 65530, 1, -65534, 65530, 1, -65533, 65530, 1, -65532, 65530, 1, -65531, 65530, 0, 0, 65531, 0, 5, 65531, 0, 65536, 65531, 0, 65541, 65531, 0, 131072, 65531, 0, 131077, 65531, 0, -65536, 65531, 0, -65535, 65531, 1, -65534, 65531, 1, -65533, 65531, 1, -65532, 65531, 1, -65531, 65531, 0, 0, 65532, 0, 1, 65532, 0, 4, 65532, 0, 5, 65532, 0, 65536, 65532, 0, 65537, 65532, 0, 65540, 65532, 0, 65541, 65532, 0, 131072, 65532, 0, 131073, 65532, 0, 131076, 65532, 0, 131077, 65532, 0, -65536, 65532, 0, -65535, 65532, 0, -65534, 65532, 1, -65533, 65532, 1, -65532, 65532, 0, -65531, 65532, 0, 1, 65533, 0, 4, 65533, 0, 65537, 65533, 0, 65540, 65533, 0, 131073, 65533, 0, 131076, 65533, 0, -65535, 65533, 0, -65534, 65533, 1, -65533, 65533, 1, -65532, 65533, 0, 1, 65534, 0, 4, 65534, 0, 65537, 65534, 0, 65540, 65534, 0, 131073, 65534, 0, 131076, 65534, 0, -65535, 65534, 0, -65534, 65534, 1, -65533, 65534, 1, -65532, 65534, 0, 1, 65535, 0, 4, 65535, 0, 65537, 65535, 0, 65540, 65535, 0, 131073, 65535, 0, 131076, 65535, 0, -65535, 65535, 0, -65534, 65535, 1, -65533, 65535, 1, -65532, 65535, 0 )
+}
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_floor_": Vector3( 0, 0, 0 )
+}
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 1 )
+
+[node name="Player" type="KinematicBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.91044, 1.5, 4.87801 )
+script = ExtResource( 5 )
+
+[node name="Sprite3D" type="Sprite3D" parent="Player"]
+visible = false
+modulate = Color( 0.968627, 0.792157, 0.0941176, 1 )
+pixel_size = 0.5
+billboard = 1
+texture = ExtResource( 2 )
+
+[node name="Head" type="Spatial" parent="Player"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 0 )
+
+[node name="Camera" type="Camera" parent="Player/Head"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.2 )
+fov = 90.0
+size = 40.0
+
+[node name="Control" type="Control" parent="Player/Head/Camera"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="Player/Head/Camera/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -20.0
+margin_right = 20.0
+margin_bottom = 20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Crosshair" type="Sprite" parent="Player/Head/Camera/Control/Control"]
+modulate = Color( 0.968627, 0.792157, 0.0941176, 1 )
+texture = ExtResource( 2 )
+
+[node name="Pickup" type="Position3D" parent="Player/Head/Camera"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3 )
+
+[node name="LookAt" type="Position3D" parent="Player/Head/Camera"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.34761 )
+
+[node name="CameraTween" type="Tween" parent="Player/Head/Camera"]
+
+[node name="Collision" type="CollisionShape" parent="Player"]
+transform = Transform( 0.75, 0, 0, 0, -3.27835e-08, -0.75, 0, 0.75, -3.27835e-08, 0, 0, 0 )
+shape = SubResource( 2 )
+
+[node name="Mesh" type="MeshInstance" parent="Player/Collision"]
+transform = Transform( 1.33333, 0, 0, 0, 1.33333, -1.77636e-14, 0, 1.77636e-14, 1.33333, 0, 0, 0 )
+visible = false
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="Interaction" type="Panel" parent="Player"]
+visible = false
+self_modulate = Color( 0, 0, 0, 1 )
+margin_top = 549.0
+margin_right = 1024.0
+margin_bottom = 600.0
+rect_clip_content = true
+
+[node name="MarginContainer" type="MarginContainer" parent="Player/Interaction"]
+margin_right = 1021.0
+margin_bottom = 51.0
+
+[node name="Text" type="Label" parent="Player/Interaction/MarginContainer"]
+margin_right = 1021.0
+margin_bottom = 51.0
+custom_fonts/font = SubResource( 4 )
+text = "(Interaction prompt placeholder)
+"
+align = 1
+valign = 1
+
+[node name="Tween" type="Tween" parent="Player/Interaction"]
+
+[node name="Spatial7" type="Spatial" parent="."]
+
+[node name="Spatial" parent="Spatial7" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.00089, 0.997328, 0.987924 )
+
+[node name="Spatial2" parent="Spatial7" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.00047, 0.997328, 0.987924 )
+
+[node name="Spatial3" parent="Spatial7" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.00089, 2.99536, 0.987924 )
+
+[node name="Spatial4" parent="Spatial7" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.00047, 2.99536, 0.987924 )
+
+[node name="Spatial5" parent="Spatial7" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.00089, 4.99961, 0.987924 )
+
+[node name="Spatial6" parent="Spatial7" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.00047, 4.99961, 0.987924 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 6, 16, -2 )
+projection = 1
+size = 40.0
+
+[node name="MagicSphere" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.05829, 1.14309, -13.9162 )
+mesh = SubResource( 6 )
+material/0 = null
+
+[node name="SphereCollider" type="Area" parent="MagicSphere"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.358819, 0.321096, -0.116587 )
+
+[node name="CollisionShape" type="CollisionShape" parent="MagicSphere/SphereCollider"]
+shape = SubResource( 7 )
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="MagicSphere"]
+stream = ExtResource( 7 )
+unit_size = 5.0
+autoplay = true
+max_distance = 30.0
+[connection signal="tween_all_completed" from="Player/Head/Camera/CameraTween" to="." method="_on_CameraTween_tween_all_completed"]
+[connection signal="body_entered" from="MagicSphere/SphereCollider" to="." method="_on_SphereCollider_body_entered"]

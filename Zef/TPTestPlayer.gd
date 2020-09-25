@@ -2,9 +2,6 @@ extends KinematicBody
 
 class_name MainCharacter
 
-export var Sensitivity_X: float = 0.01
-export var Sensitivity_Y: float = 0.01
-
 export var Jump_Speed: float = 15.0
 export var Acceleration: float = 10
 export var Walk_Max_Speed: float = 6
@@ -13,11 +10,6 @@ export var Rotate_Model_Step: float = PI * 2.0
 export var GravityFloorMul: float = 20.0
 export var GravityFlyMul: float = 3.0
 export var GravityExternalMul: float = 1.0
-const ZOOM_MIN = 0.5
-const ZOOM_MAX = 5
-const Zoom_Step: float = 0.3
-const MIN_ROT_Y = -1.55
-const MAX_ROT_Y = 0.79
 const GRAVITY = 9.8
 
 onready var camera_node: Spatial = $SpringArm
@@ -33,11 +25,8 @@ var gravity: float
 var target_angle_model: float = 0.0
 var rot_model: float = 0.0
 var old_angle_model:float = 0.0
-
 var is_playing_step = false
-
 var last_move_dir = Vector2(0,0)
-
 var GUI_management: bool = false;
 
 func _input(event):
@@ -77,7 +66,7 @@ func _physics_process(delta):
 	if is_on_floor():
 		gravity = GRAVITY * GravityFloorMul * GravityExternalMul
 		if max_speed < current_speed or move_dir ==Vector2.ZERO:
-			current_speed -= Acceleration*delta
+			current_speed -= Acceleration*delta * 3
 		else:
 			current_speed += Acceleration*delta
 		current_speed = clamp(current_speed,0,Sprint_Max_Speed)

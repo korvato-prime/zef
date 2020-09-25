@@ -35,9 +35,9 @@ albedo_color = Color( 1, 0, 0, 1 )
 
 [sub_resource type="PrismMesh" id=12]
 
-[sub_resource type="PrismMesh" id=14]
+[sub_resource type="PrismMesh" id=13]
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=14]
 resource_name = "dvl-man@idle"
 loop = true
 tracks/0/type = "value"
@@ -101,8 +101,7 @@ tracks/4/keys = {
 "values": [ Vector3( 0, 0, 0 ), Vector3( 0, -0.321705, 0 ) ]
 }
 
-[sub_resource type="Animation" id=13]
-resource_name = "dvl-man@roar"
+[sub_resource type="Animation" id=15]
 length = 2.0
 loop = true
 tracks/0/type = "value"
@@ -188,7 +187,7 @@ animation = "dvl-man@roar"
 switch_mode = 2
 auto_advance = true
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=22]
+[sub_resource type="AnimationNodeStateMachineTransition" id=19]
 switch_mode = 2
 auto_advance = true
 
@@ -197,7 +196,7 @@ states/dvl-man@idle/node = SubResource( 16 )
 states/dvl-man@idle/position = Vector2( 181, 192 )
 states/dvl-man@roar/node = SubResource( 17 )
 states/dvl-man@roar/position = Vector2( 447, 59 )
-transitions = [ "dvl-man@idle", "dvl-man@roar", SubResource( 18 ), "dvl-man@roar", "dvl-man@idle", SubResource( 22 ) ]
+transitions = [ "dvl-man@idle", "dvl-man@roar", SubResource( 18 ), "dvl-man@roar", "dvl-man@idle", SubResource( 19 ) ]
 start_node = "dvl-man@idle"
 graph_offset = Vector2( -130, -31 )
 
@@ -213,7 +212,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.014802, 7.68654 )
 environment = SubResource( 1 )
 
 [node name="DVL-MAN" type="Spatial" parent="."]
-transform = Transform( 0.996904, 0, 0.0786274, 0, 1, 0, -0.0786274, 0, 0.996904, 0, 0, 0 )
+transform = Transform( 0.988419, -0.151751, 0, 0.151751, 0.988419, 0, 0, 0, 1, 0, 0, 0.696698 )
 
 [node name="MeshInstance" type="MeshInstance" parent="DVL-MAN"]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
@@ -248,7 +247,6 @@ mesh = SubResource( 5 )
 material/0 = null
 
 [node name="Eyes" type="Spatial" parent="DVL-MAN"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="MeshInstance5" type="MeshInstance" parent="DVL-MAN/Eyes"]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.701826, 0, 1.74174 )
@@ -256,7 +254,7 @@ mesh = SubResource( 6 )
 material/0 = SubResource( 7 )
 
 [node name="MeshInstance6" type="MeshInstance" parent="DVL-MAN/Eyes"]
-transform = Transform( 0.2, 1.49012e-08, 0, -1.49012e-08, 0.2, 0, 0, 4.44089e-16, 0.2, -0.794, 0, 2.15036 )
+transform = Transform( 0.2, 1.49012e-08, 0, -1.49012e-08, 0.2, 0, 0, 4.44089e-16, 0.2, -0.551619, -0.0353974, 2.16436 )
 mesh = SubResource( 8 )
 material/0 = SubResource( 9 )
 
@@ -268,7 +266,7 @@ texture = ExtResource( 1 )
 [node name="Mouth" type="Spatial" parent="DVL-MAN"]
 
 [node name="Upper" type="Spatial" parent="DVL-MAN/Mouth"]
-transform = Transform( 1, 0, 4.47035e-08, 0, 1, 0, -4.47035e-08, 0, 1, 0, 0.198797, 0 )
+transform = Transform( 1, 0, 4.47035e-08, 0, 1, 0, -4.47035e-08, 0, 1, -5.11457e-05, 0.0955199, 0.0444325 )
 
 [node name="MeshInstance7" type="MeshInstance" parent="DVL-MAN/Mouth/Upper"]
 transform = Transform( 1, 0, 0, 0, 0.210059, 0, 0, 0, 0.247032, 0.00563309, -0.854587, 1.92843 )
@@ -301,7 +299,7 @@ mesh = SubResource( 11 )
 material/0 = null
 
 [node name="Lower" type="Spatial" parent="DVL-MAN/Mouth"]
-transform = Transform( 1, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, 1, 0, -0.31659, 0 )
+transform = Transform( 1, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, 1, -0.00979138, -0.187972, 0 )
 
 [node name="MeshInstance8" type="MeshInstance" parent="DVL-MAN/Mouth/Lower"]
 transform = Transform( -0.5, -1.93715e-07, 0, 1.93715e-07, -0.5, 0, 0, 0, 0.2, 7.45058e-09, -2.34987, 1.84967 )
@@ -310,17 +308,17 @@ material/0 = ExtResource( 2 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="DVL-MAN/Mouth/Lower"]
 transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.284893, -1.71634, 1.75993 )
-mesh = SubResource( 14 )
+mesh = SubResource( 13 )
 material/0 = null
 
 [node name="MeshInstance3" type="MeshInstance" parent="DVL-MAN/Mouth/Lower"]
 transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.00947117, -1.71634, 1.75993 )
-mesh = SubResource( 14 )
+mesh = SubResource( 13 )
 material/0 = null
 
 [node name="MeshInstance4" type="MeshInstance" parent="DVL-MAN/Mouth/Lower"]
 transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.261367, -1.71634, 1.75993 )
-mesh = SubResource( 14 )
+mesh = SubResource( 13 )
 material/0 = null
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
@@ -328,8 +326,8 @@ transform = Transform( 1, 0, 0, 0, 0.32291, -0.94643, 0, 0.94643, 0.32291, 0, -6
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "dvl-man@roar"
-anims/dvl-man@idle = SubResource( 15 )
-anims/dvl-man@roar = SubResource( 13 )
+anims/dvl-man@idle = SubResource( 14 )
+anims/dvl-man@roar = SubResource( 15 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 20 )

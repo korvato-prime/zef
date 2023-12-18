@@ -1,80 +1,58 @@
-[gd_scene load_steps=81 format=2]
+[gd_scene load_steps=74 format=2]
 
-[ext_resource path="res://assets_shared/gridmaps/MeshLibrary.meshlib" type="MeshLibrary" id=1]
-[ext_resource path="res://entities/yellowman/TPTestPlayer.gd" type="Script" id=3]
-[ext_resource path="res://rooms/Room03.gd" type="Script" id=5]
-[ext_resource path="res://rooms/FakeGridmapYellow.tscn" type="PackedScene" id=6]
-[ext_resource path="res://interface/MainMenu.tres" type="Theme" id=7]
-[ext_resource path="res://interface/trashbin.png" type="Texture" id=8]
-[ext_resource path="res://interface/not.png" type="Texture" id=9]
-[ext_resource path="res://entities/devil/demon.png" type="Texture" id=10]
-[ext_resource path="res://interface/dragtest.tscn" type="PackedScene" id=12]
-[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@WALKING2.png" type="Texture" id=13]
-[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@WALKING5.png" type="Texture" id=14]
-[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@WALKING6.png" type="Texture" id=15]
-[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@WALKING1.png" type="Texture" id=16]
+[ext_resource path="res://rooms/room_02.gd" type="Script" id=1]
+[ext_resource path="res://entities/yellowman/TPTestPlayer.gd" type="Script" id=2]
+[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@WALKING1.png" type="Texture" id=3]
+[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@WALKING3.png" type="Texture" id=4]
+[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@WALKING_DOWN5.png" type="Texture" id=5]
+[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@JUMP_DOWN.png" type="Texture" id=6]
+[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@IDLE_UP6.png" type="Texture" id=7]
+[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@WALKING_DOWN6.png" type="Texture" id=8]
+[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@WALKING_UP2.png" type="Texture" id=9]
+[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@IDLE_UP5.png" type="Texture" id=10]
+[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@WALKING_DOWN2.png" type="Texture" id=11]
+[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@IDLE_UP4.png" type="Texture" id=12]
+[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@WALKING_UP6.png" type="Texture" id=13]
+[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@WALKING_DOWN4.png" type="Texture" id=14]
+[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@JUMP_UP.png" type="Texture" id=15]
+[ext_resource path="res://entities/devil/demon.png" type="Texture" id=16]
 [ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@WALKING4.png" type="Texture" id=17]
-[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@WALKING3.png" type="Texture" id=18]
+[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@WALKING5.png" type="Texture" id=18]
 [ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@JUMP_SIDE.png" type="Texture" id=19]
-[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@WALKING_DOWN6.png" type="Texture" id=20]
-[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@WALKING_DOWN5.png" type="Texture" id=21]
-[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@WALKING_DOWN1.png" type="Texture" id=22]
-[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@IDLE_UP2.png" type="Texture" id=23]
-[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@JUMP_DOWN.png" type="Texture" id=24]
-[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@IDLE_DOWN2.png" type="Texture" id=25]
-[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@WALKING_UP1.png" type="Texture" id=26]
-[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@IDLE_UP6.png" type="Texture" id=27]
-[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@WALKING_UP2.png" type="Texture" id=28]
-[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@IDLE_UP5.png" type="Texture" id=29]
-[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@WALKING_DOWN2.png" type="Texture" id=30]
-[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@IDLE_UP4.png" type="Texture" id=31]
-[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@IDLE_DOWN3.png" type="Texture" id=32]
-[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@WALKING_UP6.png" type="Texture" id=33]
-[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@WALKING_DOWN4.png" type="Texture" id=34]
-[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@IDLE_DOWN1.png" type="Texture" id=35]
-[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@JUMP_UP.png" type="Texture" id=36]
-[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@IDLE_DOWN5.png" type="Texture" id=37]
-[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@WALKING_UP4.png" type="Texture" id=38]
-[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@WALKING_UP5.png" type="Texture" id=39]
-[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@IDLE_UP3.png" type="Texture" id=40]
-[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@WALKING_UP3.png" type="Texture" id=41]
-[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@IDLE_SIDE6.png" type="Texture" id=42]
-[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@IDLE_UP1.png" type="Texture" id=43]
-[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@IDLE_SIDE3.png" type="Texture" id=44]
-[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@WALKING_DOWN3.png" type="Texture" id=45]
-[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@IDLE_DOWN6.png" type="Texture" id=46]
-[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@IDLE_SIDE2.png" type="Texture" id=47]
-[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@IDLE_SIDE4.png" type="Texture" id=48]
-[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@IDLE_SIDE5.png" type="Texture" id=49]
-[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@IDLE_SIDE1.png" type="Texture" id=50]
-[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@IDLE_DOWN4.png" type="Texture" id=51]
-[ext_resource path="res://assets_shared/sound/sfx/limbo.wav" type="AudioStream" id=52]
-
+[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@WALKING2.png" type="Texture" id=20]
+[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@WALKING_DOWN1.png" type="Texture" id=21]
+[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@IDLE_UP2.png" type="Texture" id=22]
+[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@WALKING_UP1.png" type="Texture" id=23]
+[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@WALKING6.png" type="Texture" id=24]
+[ext_resource path="res://assets_shared/gridmaps/MeshLibrary.meshlib" type="MeshLibrary" id=25]
+[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@WALKING_DOWN3.png" type="Texture" id=26]
+[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@WALKING_UP3.png" type="Texture" id=27]
+[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@IDLE_DOWN2.png" type="Texture" id=28]
+[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@IDLE_SIDE5.png" type="Texture" id=29]
+[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@IDLE_DOWN1.png" type="Texture" id=30]
+[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@IDLE_SIDE4.png" type="Texture" id=31]
+[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@IDLE_DOWN6.png" type="Texture" id=32]
+[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@IDLE_DOWN4.png" type="Texture" id=33]
+[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@IDLE_UP3.png" type="Texture" id=34]
+[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@IDLE_SIDE2.png" type="Texture" id=35]
+[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@IDLE_SIDE1.png" type="Texture" id=36]
+[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@WALKING_UP4.png" type="Texture" id=37]
+[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@IDLE_UP1.png" type="Texture" id=38]
+[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@IDLE_DOWN3.png" type="Texture" id=39]
+[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@IDLE_SIDE6.png" type="Texture" id=40]
+[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@IDLE_SIDE3.png" type="Texture" id=41]
+[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@IDLE_DOWN5.png" type="Texture" id=42]
+[ext_resource path="res://entities/yellowman/PIXELMAN/PIXELMAN@WALKING_UP5.png" type="Texture" id=43]
+[ext_resource path="res://assets_shared/sound/sfx/limbo.wav" type="AudioStream" id=44]
 
 [sub_resource type="Environment" id=1]
 background_mode = 3
 
-[sub_resource type="Animation" id=2]
-resource_name = "New Anim"
-length = 2.0
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:near")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 25.0, 0.05 ]
-}
-
-[sub_resource type="CapsuleShape" id=3]
+[sub_resource type="CapsuleShape" id=2]
 radius = 0.340103
-height = 1.04461
+height = 1.38472
 
-[sub_resource type="ArrayMesh" id=4]
+[sub_resource type="ArrayMesh" id=3]
 resource_name = "Mesh"
 surfaces/0 = {
 "aabb": AABB( -0.019, 0.007, -0.00299999, 0.038, 0.038, 0.006 ),
@@ -88,7 +66,7 @@ surfaces/0 = {
 "vertex_count": 408
 }
 
-[sub_resource type="Skin" id=5]
+[sub_resource type="Skin" id=4]
 resource_name = "Skin"
 bind_count = 25
 bind/0/name = "hips"
@@ -167,10 +145,10 @@ bind/24/name = "right_toe_end"
 bind/24/bone = -1
 bind/24/pose = Transform( -0.711776, 0.0104234, -0.702269, -0.702392, -0.00514816, 0.711776, 0.00746568, 0.999933, 0.0140533, -0.0022117, -0.00483434, -0.0070219 )
 
-[sub_resource type="SpatialMaterial" id=6]
+[sub_resource type="SpatialMaterial" id=5]
 albedo_color = Color( 0.968627, 0.792157, 0.0941176, 1 )
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=6]
 resource_name = "FLOATING01"
 length = 3.63333
 loop = true
@@ -350,7 +328,7 @@ tracks/24/imported = true
 tracks/24/enabled = true
 tracks/24/keys = PoolRealArray( 0, 1, -0.000111383, 0.00819308, -4.7646e-05, -0.0790486, 0.300502, 0.0715218, 0.947805, 1, 1, 1, 0.0666667, 1, -0.000111381, 0.00819308, -4.76448e-05, -0.0789489, 0.30105, 0.0716628, 0.947629, 1, 1, 1, 0.133333, 1, -0.000111375, 0.00819308, -4.76397e-05, -0.0775574, 0.303702, 0.0714283, 0.946915, 1, 1, 1, 0.2, 1, -0.000111372, 0.00819308, -4.76327e-05, -0.0756572, 0.308442, 0.06961, 0.945671, 1, 1, 1, 0.266667, 1, -0.000111371, 0.00819308, -4.76241e-05, -0.0749731, 0.315221, 0.0665779, 0.943707, 1, 1, 1, 0.333333, 1, -0.000111372, 0.00819307, -4.76148e-05, -0.0764239, 0.323914, 0.0626555, 0.940911, 1, 1, 1, 0.4, 1, -0.000111376, 0.00819307, -4.76066e-05, -0.0790909, 0.334438, 0.05881, 0.93725, 1, 1, 1, 0.466667, 1, -0.000111376, 0.00819308, -4.75941e-05, -0.0815449, 0.3467, 0.0565455, 0.932712, 1, 1, 1, 0.533333, 1, -0.000111376, 0.00819308, -4.75838e-05, -0.0840341, 0.359482, 0.0566207, 0.927634, 1, 1, 1, 0.6, 1, -0.000111381, 0.00819308, -4.75815e-05, -0.0884661, 0.371533, 0.0578356, 0.922384, 1, 1, 1, 0.666667, 1, -0.000111387, 0.00819308, -4.75834e-05, -0.0954692, 0.381651, 0.0577514, 0.917547, 1, 1, 1, 0.733333, 1, -0.000111391, 0.00819308, -4.75859e-05, -0.102248, 0.389495, 0.0546814, 0.913701, 1, 1, 1, 0.8, 1, -0.000111391, 0.00819306, -4.75859e-05, -0.104708, 0.395122, 0.0498316, 0.911281, 1, 1, 1, 0.866667, 1, -0.00011139, 0.00819305, -4.75848e-05, -0.101841, 0.398405, 0.0456121, 0.910396, 1, 1, 1, 0.933333, 1, -0.000111387, 0.00819305, -4.75829e-05, -0.0960229, 0.398578, 0.0429567, 0.911082, 1, 1, 1, 1, 1, -0.000111384, 0.00819304, -4.75827e-05, -0.0897315, 0.395165, 0.0419517, 0.913254, 1, 1, 1, 1.06667, 1, -0.000111384, 0.00819303, -4.75857e-05, -0.0844171, 0.389086, 0.0422963, 0.91635, 1, 1, 1, 1.13333, 1, -0.000111384, 0.00819303, -4.75892e-05, -0.0813309, 0.383014, 0.0435069, 0.919126, 1, 1, 1, 1.2, 1, -0.000111392, 0.00819304, -4.75999e-05, -0.080939, 0.378677, 0.046641, 0.920802, 1, 1, 1, 1.26667, 1, -0.000111399, 0.00819304, -4.7605e-05, -0.0839345, 0.374382, 0.0494566, 0.922143, 1, 1, 1, 1.33333, 1, -0.000111401, 0.00819305, -4.7606e-05, -0.0877161, 0.369256, 0.0530763, 0.923655, 1, 1, 1, 1.4, 1, -0.000111403, 0.00819306, -4.76104e-05, -0.0890994, 0.362271, 0.0573882, 0.926028, 1, 1, 1, 1.46667, 1, -0.000111405, 0.00819307, -4.76188e-05, -0.0869525, 0.352762, 0.0613152, 0.929644, 1, 1, 1, 1.53333, 1, -0.000111407, 0.00819308, -4.76304e-05, -0.0837582, 0.341118, 0.0630452, 0.934156, 1, 1, 1, 1.6, 1, -0.000111411, 0.00819308, -4.76462e-05, -0.0815632, 0.328899, 0.0632027, 0.938711, 1, 1, 1, 1.66667, 1, -0.000111416, 0.00819309, -4.76623e-05, -0.0797633, 0.317976, 0.0641574, 0.942557, 1, 1, 1, 1.73333, 1, -0.000111418, 0.00819309, -4.76695e-05, -0.0780487, 0.310131, 0.0654031, 0.945225, 1, 1, 1, 1.8, 1, -0.000111417, 0.00819309, -4.76681e-05, -0.0770715, 0.30609, 0.0656093, 0.946607, 1, 1, 1, 1.86667, 1, -0.000111413, 0.00819308, -4.76621e-05, -0.0767045, 0.305407, 0.0661029, 0.946823, 1, 1, 1, 1.93333, 1, -0.000111409, 0.00819308, -4.76527e-05, -0.0770161, 0.30767, 0.0662313, 0.946056, 1, 1, 1, 2, 1, -0.000111403, 0.00819308, -4.76409e-05, -0.0780543, 0.312971, 0.065054, 0.944312, 1, 1, 1, 2.06667, 1, -0.000111396, 0.00819308, -4.76285e-05, -0.0797505, 0.321555, 0.0620763, 0.941482, 1, 1, 1, 2.13333, 1, -0.000111392, 0.00819307, -4.76162e-05, -0.0815281, 0.332852, 0.0579213, 0.937661, 1, 1, 1, 2.2, 1, -0.000111391, 0.00819307, -4.76039e-05, -0.0828767, 0.345211, 0.0544186, 0.933273, 1, 1, 1, 2.26667, 1, -0.000111391, 0.00819307, -4.75938e-05, -0.0848367, 0.356774, 0.0522325, 0.928863, 1, 1, 1, 2.33333, 1, -0.000111396, 0.00819307, -4.75904e-05, -0.0883004, 0.366443, 0.0521294, 0.924773, 1, 1, 1, 2.4, 1, -0.000111404, 0.00819307, -4.75924e-05, -0.0923497, 0.374369, 0.0544558, 0.921062, 1, 1, 1, 2.46667, 1, -0.000111412, 0.00819307, -4.75983e-05, -0.0954812, 0.381229, 0.0569468, 0.917772, 1, 1, 1, 2.53333, 1, -0.00011142, 0.00819307, -4.76066e-05, -0.0969656, 0.386423, 0.0567269, 0.915454, 1, 1, 1, 2.6, 1, -0.000111427, 0.00819306, -4.76146e-05, -0.0969252, 0.388576, 0.0535076, 0.914741, 1, 1, 1, 2.66667, 1, -0.000111433, 0.00819306, -4.76188e-05, -0.095853, 0.387642, 0.0488515, 0.915511, 1, 1, 1, 2.73333, 1, -0.000111434, 0.00819306, -4.76181e-05, -0.0941913, 0.384717, 0.0441203, 0.917155, 1, 1, 1, 2.8, 1, -0.00011143, 0.00819305, -4.76164e-05, -0.0916995, 0.380608, 0.0417872, 0.919229, 1, 1, 1, 2.86667, 1, -0.000111425, 0.00819305, -4.76148e-05, -0.0888154, 0.375692, 0.0421247, 0.921517, 1, 1, 1, 2.93333, 1, -0.000111421, 0.00819304, -4.76146e-05, -0.0862617, 0.370378, 0.0433552, 0.92385, 1, 1, 1, 3, 1, -0.000111416, 0.00819305, -4.7616e-05, -0.0841176, 0.36544, 0.0449035, 0.925938, 1, 1, 1, 3.06667, 1, -0.000111412, 0.00819305, -4.7616e-05, -0.0831447, 0.360152, 0.0458408, 0.92805, 1, 1, 1, 3.13333, 1, -0.000111408, 0.00819305, -4.76129e-05, -0.0837609, 0.353549, 0.0471452, 0.930465, 1, 1, 1, 3.26667, 1, -0.000111397, 0.00819306, -4.76176e-05, -0.0869955, 0.33504, 0.0550251, 0.936564, 1, 1, 1, 3.33333, 1, -0.000111394, 0.00819307, -4.76257e-05, -0.0875947, 0.324068, 0.0583537, 0.940161, 1, 1, 1, 3.4, 1, -0.000111393, 0.00819308, -4.76355e-05, -0.086427, 0.313735, 0.0604043, 0.943638, 1, 1, 1, 3.46667, 1, -0.000111392, 0.00819309, -4.76437e-05, -0.0833637, 0.305814, 0.0633567, 0.946316, 1, 1, 1, 3.53333, 1, -0.000111389, 0.00819309, -4.76472e-05, -0.0804742, 0.301515, 0.0658893, 0.947772, 1, 1, 1, 3.6, 1, -0.000111386, 0.00819308, -4.76486e-05, -0.0791835, 0.300343, 0.0688738, 0.94804, 1, 1, 1, 3.63333, 1, -0.000111383, 0.00819308, -4.7646e-05, -0.0790486, 0.300502, 0.0715217, 0.947805, 1, 1, 1 )
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=7]
 resource_name = "FLOATING02"
 length = 0.733333
 loop = true
@@ -530,7 +508,7 @@ tracks/24/imported = true
 tracks/24/enabled = true
 tracks/24/keys = PoolRealArray( 0, 1, -2.91038e-11, 0, -2.32831e-10, -1.30385e-08, 1.73472e-17, -1.86264e-09, 1, 1, 1, 1, 0.0666667, 1, -4.28053e-06, -5.21541e-06, -9.69088e-06, 0.000257029, -0.000143412, 0.000626275, 1, 1, 1, 1, 0.133333, 1, -2.43797e-05, -7.86595e-06, -2.55178e-05, 0.00206125, -0.000204458, 0.00350037, 0.999992, 1, 1, 1, 0.2, 1, -4.7637e-05, -3.30247e-06, -3.27742e-05, 0.00484182, -8.15357e-05, 0.00764922, 0.999959, 1, 1, 1, 0.266667, 1, -5.91607e-05, 4.44986e-06, -2.85062e-05, 0.00770479, 9.06658e-05, 0.011863, 0.9999, 1, 1, 1, 0.333333, 1, -5.62391e-05, 1.16862e-05, -1.66248e-05, 0.00975736, 0.000203773, 0.0148621, 0.999842, 1, 1, 1, 0.4, 1, -4.07287e-05, 1.22841e-05, -4.28758e-06, 0.0101672, 0.000133478, 0.0156146, 0.999826, 1, 1, 1, 0.466667, 1, -1.85647e-05, 6.11506e-06, 4.53088e-06, 0.00899104, -9.34645e-05, 0.0142093, 0.999859, 1, 1, 1, 0.533333, 1, 3.47733e-06, -3.5204e-06, 7.96258e-06, 0.00682308, -0.000370154, 0.0113708, 0.999912, 1, 1, 1, 0.6, 1, 1.87771e-05, -1.36495e-05, 4.35137e-06, 0.00422713, -0.00060654, 0.00779188, 0.999961, 1, 1, 1, 0.666667, 1, 1.62921e-05, -1.19153e-05, 3.47802e-06, 0.00176171, -0.000459939, 0.00368152, 0.999992, 1, 1, 1, 0.733333, 1, -2.91038e-11, 0, -2.32831e-10, -1.30385e-08, 1.73472e-17, -1.86264e-09, 1, 1, 1, 1 )
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=8]
 resource_name = "IDLE"
 length = 4.03333
 loop = true
@@ -710,7 +688,7 @@ tracks/24/imported = true
 tracks/24/enabled = true
 tracks/24/keys = PoolRealArray( 0, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.000117225, -0.00577619, 0.00725555, 0.999957, 1, 1, 1, 0.0666667, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.000574667, -0.00700436, 0.00743522, 0.999948, 1, 1, 1, 0.133333, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.00176311, -0.00873376, 0.00771465, 0.999931, 1, 1, 1, 0.2, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.00297815, -0.00902289, 0.00780895, 0.999924, 1, 1, 1, 0.266667, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.00452938, -0.0087126, 0.00825874, 0.999918, 1, 1, 1, 0.333333, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.00675912, -0.00907918, 0.00936388, 0.999892, 1, 1, 1, 0.4, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.00888218, -0.00746049, 0.00974396, 0.999885, 1, 1, 1, 0.466667, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.0101876, -0.00498878, 0.00950923, 0.99989, 1, 1, 1, 0.533333, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.0104985, 0.00473825, 0.00845981, 0.999898, 1, 1, 1, 0.6, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.0101542, 0.0255124, 0.00850158, 0.999587, 1, 1, 1, 0.666667, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.00992098, 0.0548896, 0.00901001, 0.998403, 1, 1, 1, 0.8, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.0117511, 0.128897, 0.0145692, 0.991481, 1, 1, 1, 0.866667, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.0133167, 0.179191, 0.018934, 0.983542, 1, 1, 1, 1, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.0148866, 0.309658, 0.0342544, 0.950114, 1, 1, 1, 1.13333, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.0143813, 0.430869, 0.0466192, 0.901095, 1, 1, 1, 1.2, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.0136017, 0.453083, 0.0491631, 0.890008, 1, 1, 1, 1.26667, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.0123851, 0.450339, 0.0483976, 0.891459, 1, 1, 1, 1.33333, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.010473, 0.437665, 0.0475397, 0.897819, 1, 1, 1, 1.4, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.00670453, 0.418475, 0.0466967, 0.907003, 1, 1, 1, 1.46667, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.000222006, 0.3956, 0.0458471, 0.917278, 1, 1, 1, 1.53333, 1, -0.000111439, 0.00819298, -4.76216e-05, -0.00489177, 0.365585, 0.0433199, 0.929756, 1, 1, 1, 1.66667, 1, -0.000111439, 0.00819298, -4.76216e-05, -0.00515633, 0.282687, 0.0348902, 0.958564, 1, 1, 1, 1.93333, 1, -0.000111439, 0.00819298, -4.76216e-05, -0.000751093, 0.0970984, 0.0227142, 0.995015, 1, 1, 1, 2.06667, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.00330949, -0.0340694, 0.0156844, 0.999291, 1, 1, 1, 2.26667, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.00299641, -0.219518, 0.0146266, 0.975494, 1, 1, 1, 2.33333, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.00157279, -0.26729, 0.0138898, 0.963515, 1, 1, 1, 2.4, 1, -0.000111439, 0.00819298, -4.76216e-05, -0.000261093, -0.300109, 0.0143358, 0.953797, 1, 1, 1, 2.46667, 1, -0.000111439, 0.00819298, -4.76216e-05, -0.000900042, -0.320043, 0.0157773, 0.947271, 1, 1, 1, 2.53333, 1, -0.000111439, 0.00819298, -4.76216e-05, -0.00236772, -0.32974, 0.0166685, 0.943922, 1, 1, 1, 2.6, 1, -0.000111439, 0.00819298, -4.76216e-05, -0.00383617, -0.332062, 0.0172674, 0.943092, 1, 1, 1, 2.66667, 1, -0.000111439, 0.00819298, -4.76216e-05, -0.00638301, -0.325254, 0.0163706, 0.945464, 1, 1, 1, 2.73333, 1, -0.000111439, 0.00819298, -4.76216e-05, -0.00986622, -0.310031, 0.0153858, 0.950551, 1, 1, 1, 2.8, 1, -0.000111439, 0.00819298, -4.76216e-05, -0.0128962, -0.284979, 0.0134554, 0.958353, 1, 1, 1, 2.86667, 1, -0.000111439, 0.00819298, -4.76216e-05, -0.0143995, -0.24732, 0.0106157, 0.968769, 1, 1, 1, 2.93333, 1, -0.000111439, 0.00819298, -4.76216e-05, -0.0145171, -0.205389, 0.0108694, 0.978512, 1, 1, 1, 3.2, 1, -0.000111439, 0.00819298, -4.76216e-05, -0.00552709, -0.0527575, 0.0202467, 0.998387, 1, 1, 1, 3.26667, 1, -0.000111439, 0.00819298, -4.76216e-05, -0.00194796, -0.0270642, 0.0195464, 0.999441, 1, 1, 1, 3.33333, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.00158413, -0.00908739, 0.0180174, 0.999795, 1, 1, 1, 3.4, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.00339356, 0.0054852, 0.0172359, 0.999831, 1, 1, 1, 3.46667, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.00308911, 0.0155905, 0.0150837, 0.99976, 1, 1, 1, 3.53333, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.00135246, 0.0193231, 0.0131776, 0.999726, 1, 1, 1, 3.6, 1, -0.000111439, 0.00819298, -4.76216e-05, -0.000208624, 0.0181056, 0.0118886, 0.999765, 1, 1, 1, 3.66667, 1, -0.000111439, 0.00819298, -4.76216e-05, -0.000985671, 0.0142089, 0.0112263, 0.999836, 1, 1, 1, 3.73333, 1, -0.000111439, 0.00819298, -4.76216e-05, -0.000645325, 0.00868631, 0.0106885, 0.999905, 1, 1, 1, 3.86667, 1, -0.000111439, 0.00819298, -4.76216e-05, -4.79303e-05, 0.000676166, 0.00905566, 0.999959, 1, 1, 1, 3.93333, 1, -0.000111439, 0.00819298, -4.76216e-05, 7.03125e-05, -0.00251195, 0.008257, 0.999963, 1, 1, 1, 4, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.000113036, -0.00491697, 0.00752956, 0.99996, 1, 1, 1, 4.03333, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.000117238, -0.00577604, 0.00725567, 0.999957, 1, 1, 1 )
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=9]
 resource_name = "JUMPING01"
 length = 2.4
 tracks/0/type = "transform"
@@ -889,7 +867,7 @@ tracks/24/imported = true
 tracks/24/enabled = true
 tracks/24/keys = PoolRealArray( 0, 1, -0.000111439, 0.00819297, -4.76222e-05, -0.0127059, 0.357121, 0.0338546, 0.933358, 1, 1, 1, 0.0666667, 1, -0.000111439, 0.00819297, -4.76222e-05, -0.0120875, 0.356784, 0.033818, 0.933496, 1, 1, 1, 0.133333, 1, -0.000111439, 0.00819297, -4.76222e-05, -0.00971353, 0.356328, 0.0335881, 0.933706, 1, 1, 1, 0.2, 1, -0.000111439, 0.00819297, -4.76222e-05, -0.0037045, 0.356172, 0.031725, 0.933875, 1, 1, 1, 0.266667, 1, -0.000111439, 0.00819297, -4.76222e-05, 0.00746139, 0.357743, 0.0282843, 0.933362, 1, 1, 1, 0.333333, 1, -0.000111439, 0.00819297, -4.76225e-05, 0.0243896, 0.360522, 0.0227638, 0.932154, 1, 1, 1, 0.4, 1, -0.000111439, 0.00819297, -4.76225e-05, 0.0493996, 0.36405, 0.0155488, 0.929938, 1, 1, 1, 0.466667, 1, -0.000111439, 0.00819297, -4.76227e-05, 0.0862629, 0.368358, 0.00647221, 0.925651, 1, 1, 1, 0.533333, 1, -0.00011144, 0.00819297, -4.76232e-05, 0.128135, 0.38069, -0.00981541, 0.915729, 1, 1, 1, 0.6, 1, -0.00011144, 0.00819297, -4.76232e-05, 0.157447, 0.386643, -0.0253524, 0.908336, 1, 1, 1, 0.666667, 1, -0.00011144, 0.00819296, -4.76234e-05, 0.155177, 0.391477, -0.0201403, 0.906786, 1, 1, 1, 0.733333, 1, -0.00011144, 0.00819296, -4.76232e-05, 0.119311, 0.398441, -0.00845326, 0.909361, 1, 1, 1, 0.8, 1, -0.00011144, 0.00819296, -4.76227e-05, 0.0581787, 0.395712, 0.0144916, 0.916415, 1, 1, 1, 0.866667, 1, -0.000111439, 0.00819297, -4.7622e-05, 0.0248956, 0.389635, 0.036277, 0.919918, 1, 1, 1, 0.933333, 1, -0.000111439, 0.00819297, -4.76213e-05, 0.0244396, 0.392509, 0.0432378, 0.918406, 1, 1, 1, 1, 1, -0.000111439, 0.00819297, -4.76209e-05, 0.0301988, 0.378087, 0.0411823, 0.924361, 1, 1, 1, 1.06667, 1, -0.000111439, 0.00819298, -4.76209e-05, 0.028956, 0.354785, 0.0481495, 0.933258, 1, 1, 1, 1.13333, 1, -0.000111439, 0.00819298, -4.76209e-05, 0.0241508, 0.356379, 0.0564714, 0.932321, 1, 1, 1, 1.2, 1, -0.000111439, 0.00819298, -4.76206e-05, 0.023115, 0.359395, 0.0625855, 0.930797, 1, 1, 1, 1.26667, 1, -0.000111439, 0.00819298, -4.76206e-05, 0.0258698, 0.359391, 0.0640266, 0.930629, 1, 1, 1, 1.33333, 1, -0.000111439, 0.00819297, -4.76209e-05, 0.0258301, 0.361492, 0.0665297, 0.92964, 1, 1, 1, 1.4, 1, -0.000111439, 0.00819297, -4.76209e-05, 0.0196908, 0.367841, 0.0703837, 0.927012, 1, 1, 1, 1.46667, 1, -0.00011144, 0.00819297, -4.76216e-05, 0.0446851, 0.363667, 0.0500337, 0.92911, 1, 1, 1, 1.53333, 1, -0.00011144, 0.00819297, -4.76218e-05, 0.0241335, 0.378811, 0.0433651, 0.924143, 1, 1, 1, 1.6, 1, -0.00011144, 0.00819297, -4.76218e-05, 0.0234493, 0.374593, 0.0431706, 0.925887, 1, 1, 1, 1.66667, 1, -0.00011144, 0.00819297, -4.76218e-05, 0.0286685, 0.382141, 0.0400096, 0.922793, 1, 1, 1, 1.73333, 1, -0.00011144, 0.00819297, -4.76216e-05, 0.0190502, 0.382181, 0.0436967, 0.922857, 1, 1, 1, 1.8, 1, -0.00011144, 0.00819297, -4.76216e-05, 0.0120909, 0.3701, 0.0460768, 0.92777, 1, 1, 1, 1.86667, 1, -0.000111439, 0.00819297, -4.76216e-05, 0.00859766, 0.3592, 0.0403747, 0.932347, 1, 1, 1, 1.93333, 1, -0.000111439, 0.00819297, -4.76218e-05, 0.00246183, 0.35349, 0.0357059, 0.934753, 1, 1, 1, 2, 1, -0.000111439, 0.00819297, -4.76218e-05, -0.00295497, 0.343649, 0.0350045, 0.938441, 1, 1, 1, 2.06667, 1, -0.000111439, 0.00819297, -4.7622e-05, -0.00565402, 0.337288, 0.0378299, 0.940624, 1, 1, 1, 2.13333, 1, -0.000111439, 0.00819297, -4.7622e-05, -0.00961245, 0.34185, 0.0381267, 0.938932, 1, 1, 1, 2.2, 1, -0.000111439, 0.00819297, -4.7622e-05, -0.013191, 0.347822, 0.0373152, 0.936725, 1, 1, 1, 2.26667, 1, -0.000111439, 0.00819297, -4.76222e-05, -0.0140004, 0.353671, 0.036199, 0.934564, 1, 1, 1, 2.33333, 1, -0.000111439, 0.00819297, -4.76222e-05, -0.0134119, 0.356834, 0.0343843, 0.933439, 1, 1, 1, 2.4, 1, -0.000111439, 0.00819297, -4.76222e-05, -0.0127059, 0.357121, 0.0338545, 0.933358, 1, 1, 1 )
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=10]
 resource_name = "JUMPING02"
 length = 0.866667
 tracks/0/type = "transform"
@@ -1068,7 +1046,7 @@ tracks/24/imported = true
 tracks/24/enabled = true
 tracks/24/keys = PoolRealArray( 0, 1, -0.000110106, 0.00810453, -5.79145e-05, 0.000117274, -0.00577656, 0.00726009, 0.999957, 1, 1, 1, 0.0666667, 1, -0.000109663, 0.00810436, -5.85592e-05, 0.00845534, -0.00632084, 0.00556001, 0.999929, 1, 1, 1, 0.133333, 1, -0.000106571, 0.00809649, -6.43386e-05, 0.0655043, -0.0286184, 0.00247411, 0.997439, 1, 1, 1, 0.2, 1, -0.000102376, 0.00807428, -7.31072e-05, 0.155744, -0.0746612, -0.0119348, 0.9849, 1, 1, 1, 0.266667, 1, -0.000100023, 0.00804193, -7.97613e-05, 0.212501, -0.0936758, -0.00698673, 0.972635, 1, 1, 1, 0.333333, 1, -0.000100392, 0.00801877, -8.03601e-05, 0.189013, -0.0901107, 0.019959, 0.977628, 1, 1, 1, 0.4, 1, -0.000102978, 0.00801955, -7.80337e-05, 0.0972392, -0.0620508, 0.0195861, 0.993132, 1, 1, 1, 0.466667, 1, -0.000109998, 0.00804855, -7.24494e-05, 0.0168915, -0.00575996, 0.0191671, 0.999657, 1, 1, 1, 0.533333, 1, -0.00011949, 0.00810369, -5.60889e-05, -0.0691843, 0.0258003, 0.0430314, 0.996341, 1, 1, 1, 0.6, 1, -0.000128575, 0.00816021, -4.23698e-05, -0.0481025, 0.0215111, 0.0662838, 0.996409, 1, 1, 1, 0.666667, 1, -0.00012613, 0.00820689, -4.43312e-05, 0.0260536, 0.0293456, 0.105234, 0.993673, 1, 1, 1, 0.733333, 1, -0.000125283, 0.00823869, -4.30257e-05, 0.0380521, 0.0228329, 0.122013, 0.991536, 1, 1, 1, 0.8, 1, -0.000126023, 0.00825137, -3.8302e-05, -0.0537355, 0.0366988, 0.130499, 0.989311, 1, 1, 1, 0.866667, 1, -0.000125817, 0.00825157, -3.56978e-05, -0.113751, 0.0684138, 0.125638, 0.983156, 1, 1, 1 )
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=11]
 resource_name = "RUNNING"
 length = 0.733333
 loop = true
@@ -1248,7 +1226,7 @@ tracks/24/imported = true
 tracks/24/enabled = true
 tracks/24/keys = PoolRealArray( 0, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.0718047, 0.386133, -0.00979821, 0.919592, 1, 1, 1, 0.0666667, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.0733482, 0.382302, -0.00584001, 0.921103, 1, 1, 1, 0.133333, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.0742409, 0.404926, 0.00528924, 0.911315, 1, 1, 1, 0.2, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.064449, 0.384203, 0.00423584, 0.920987, 1, 1, 1, 0.266667, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.0507388, 0.403516, 0.0116981, 0.91349, 1, 1, 1, 0.333333, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.0591511, 0.407074, 0.0129849, 0.911386, 1, 1, 1, 0.4, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.0577645, 0.409548, -0.00977694, 0.910405, 1, 1, 1, 0.466667, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.0772517, 0.368341, -0.0390671, 0.925652, 1, 1, 1, 0.533333, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.0853615, 0.375984, -0.0305408, 0.92218, 1, 1, 1, 0.6, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.0778093, 0.384217, -0.0182211, 0.919778, 1, 1, 1, 0.666667, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.0741398, 0.393242, -0.0251864, 0.916095, 1, 1, 1, 0.733333, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.0718047, 0.386133, -0.00979821, 0.919592, 1, 1, 1 )
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=12]
 resource_name = "WALKING"
 length = 1.06667
 loop = true
@@ -1428,92 +1406,82 @@ tracks/24/imported = true
 tracks/24/enabled = true
 tracks/24/keys = PoolRealArray( 0, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.0369464, 0.385058, 0.00664392, 0.922128, 1, 1, 1, 0.0666667, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.0368915, 0.374369, 0.00513752, 0.926532, 1, 1, 1, 0.133333, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.0332179, 0.358411, 0.00152893, 0.932971, 1, 1, 1, 0.2, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.0342278, 0.346798, 0.00352139, 0.937308, 1, 1, 1, 0.266667, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.0357364, 0.331429, 0.00318402, 0.942798, 1, 1, 1, 0.333333, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.0383534, 0.323736, 0.00558148, 0.945353, 1, 1, 1, 0.4, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.0457505, 0.331909, 0.00790307, 0.942168, 1, 1, 1, 0.466667, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.040462, 0.342376, 0.00799444, 0.938657, 1, 1, 1, 0.533333, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.0359299, 0.35843, 0.00422399, 0.932856, 1, 1, 1, 0.6, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.0427675, 0.387833, 0.00893545, 0.920693, 1, 1, 1, 0.666667, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.0500803, 0.403805, 0.0203992, 0.913245, 1, 1, 1, 0.733333, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.0514784, 0.415197, 0.0245646, 0.907941, 1, 1, 1, 0.8, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.0543205, 0.430912, 0.0249861, 0.900411, 1, 1, 1, 0.866667, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.0554267, 0.431798, 0.00971913, 0.900213, 1, 1, 1, 0.933333, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.0512142, 0.420057, -0.00281896, 0.906047, 1, 1, 1, 1, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.0407017, 0.409421, 0.00210674, 0.911435, 1, 1, 1, 1.06667, 1, -0.000111439, 0.00819298, -4.76216e-05, 0.0369464, 0.385058, 0.00664382, 0.922128, 1, 1, 1 )
 
-[sub_resource type="AnimationNodeAnimation" id=14]
+[sub_resource type="AnimationNodeAnimation" id=13]
 animation = "FLOATING02"
 
-[sub_resource type="AnimationNodeAnimation" id=15]
+[sub_resource type="AnimationNodeAnimation" id=14]
 animation = "JUMPING02"
 
-[sub_resource type="AnimationNodeAnimation" id=16]
+[sub_resource type="AnimationNodeAnimation" id=15]
 animation = "IDLE"
 
-[sub_resource type="AnimationNodeAnimation" id=17]
+[sub_resource type="AnimationNodeAnimation" id=16]
 animation = "WALKING"
 
-[sub_resource type="AnimationNodeAnimation" id=18]
+[sub_resource type="AnimationNodeAnimation" id=17]
 animation = "RUNNING"
 
-[sub_resource type="AnimationNodeBlendSpace1D" id=19]
-blend_point_0/node = SubResource( 16 )
+[sub_resource type="AnimationNodeBlendSpace1D" id=18]
+blend_point_0/node = SubResource( 15 )
 blend_point_0/pos = 0.0
-blend_point_1/node = SubResource( 17 )
+blend_point_1/node = SubResource( 16 )
 blend_point_1/pos = 4.0
-blend_point_2/node = SubResource( 18 )
+blend_point_2/node = SubResource( 17 )
 blend_point_2/pos = 8.0
 min_space = 0.0
 max_space = 8.0
 value_label = "blend_position"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=20]
+[sub_resource type="AnimationNodeStateMachineTransition" id=19]
 advance_condition = "is_jump"
 xfade_time = 0.1
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=21]
+[sub_resource type="AnimationNodeStateMachineTransition" id=20]
 switch_mode = 2
 auto_advance = true
 xfade_time = 0.3
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=22]
+[sub_resource type="AnimationNodeStateMachineTransition" id=21]
 advance_condition = "is_floor"
 xfade_time = 0.15
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=23]
+[sub_resource type="AnimationNodeStateMachineTransition" id=22]
 advance_condition = "is_not_floor"
 xfade_time = 0.3
 
-[sub_resource type="AnimationNodeStateMachine" id=24]
-states/Floating/node = SubResource( 14 )
+[sub_resource type="AnimationNodeStateMachine" id=23]
+states/Floating/node = SubResource( 13 )
 states/Floating/position = Vector2( 368, 16 )
-states/Jumping/node = SubResource( 15 )
+states/Jumping/node = SubResource( 14 )
 states/Jumping/position = Vector2( 84, -83 )
-states/Moving/node = SubResource( 19 )
+states/Moving/node = SubResource( 18 )
 states/Moving/position = Vector2( -184, 16 )
-transitions = [ "Moving", "Jumping", SubResource( 20 ), "Jumping", "Floating", SubResource( 21 ), "Floating", "Moving", SubResource( 22 ), "Moving", "Floating", SubResource( 23 ) ]
+transitions = [ "Moving", "Jumping", SubResource( 19 ), "Jumping", "Floating", SubResource( 20 ), "Floating", "Moving", SubResource( 21 ), "Moving", "Floating", SubResource( 22 ) ]
 start_node = "Moving"
 graph_offset = Vector2( -500, -163 )
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=25]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=24]
 
-[sub_resource type="SpriteFrames" id=26]
+[sub_resource type="SpriteFrames" id=25]
 animations = [ {
-"frames": [ ExtResource( 24 ) ],
-"loop": true,
-"name": "JUMPING_DOWN",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 16 ), ExtResource( 13 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 14 ), ExtResource( 15 ) ],
-"loop": true,
-"name": "WALKING_SIDE",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 35 ), ExtResource( 25 ), ExtResource( 32 ), ExtResource( 51 ), ExtResource( 37 ), ExtResource( 46 ) ],
+"frames": [ ExtResource( 30 ), ExtResource( 28 ), ExtResource( 39 ), ExtResource( 33 ), ExtResource( 42 ), ExtResource( 32 ) ],
 "loop": true,
 "name": "IDLE_DOWN",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 36 ) ],
+"frames": [ ExtResource( 36 ), ExtResource( 35 ), ExtResource( 41 ), ExtResource( 31 ), ExtResource( 29 ), ExtResource( 40 ) ],
 "loop": true,
-"name": "JUMPING_UP",
+"name": "IDLE_SIDE",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 22 ), ExtResource( 30 ), ExtResource( 45 ), ExtResource( 34 ), ExtResource( 21 ), ExtResource( 20 ) ],
-"loop": true,
-"name": "WALKING_DOWN",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 43 ), ExtResource( 23 ), ExtResource( 40 ), ExtResource( 31 ), ExtResource( 29 ), ExtResource( 27 ) ],
+"frames": [ ExtResource( 38 ), ExtResource( 22 ), ExtResource( 34 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 7 ) ],
 "loop": true,
 "name": "IDLE_UP",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "JUMPING_DOWN",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 19 ) ],
@@ -1521,33 +1489,28 @@ animations = [ {
 "name": "JUMPING_SIDE",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 26 ), ExtResource( 28 ), ExtResource( 41 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 33 ) ],
+"frames": [ ExtResource( 15 ) ],
+"loop": true,
+"name": "JUMPING_UP",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 21 ), ExtResource( 11 ), ExtResource( 26 ), ExtResource( 14 ), ExtResource( 5 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "WALKING_DOWN",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 20 ), ExtResource( 4 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 24 ) ],
+"loop": true,
+"name": "WALKING_SIDE",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 23 ), ExtResource( 9 ), ExtResource( 27 ), ExtResource( 37 ), ExtResource( 43 ), ExtResource( 13 ) ],
 "loop": true,
 "name": "WALKING_UP",
 "speed": 5.0
-}, {
-"frames": [ ExtResource( 50 ), ExtResource( 47 ), ExtResource( 44 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 42 ) ],
-"loop": true,
-"name": "IDLE_SIDE",
-"speed": 5.0
 } ]
 
-[sub_resource type="Animation" id=27]
-length = 3.0
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:translation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1, 2, 3 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, -2 ), Vector3( -2, 0, -2 ), Vector3( -2, -2, -2 ) ]
-}
-
-[sub_resource type="SpatialMaterial" id=28]
+[sub_resource type="SpatialMaterial" id=26]
 roughness = 0.14
 emission_enabled = true
 emission = Color( 1, 0.980392, 0, 1 )
@@ -1555,85 +1518,86 @@ emission_energy = 4.63
 emission_operator = 0
 emission_on_uv2 = false
 
-[sub_resource type="SphereMesh" id=29]
-material = SubResource( 28 )
+[sub_resource type="SphereMesh" id=27]
+material = SubResource( 26 )
 
-[sub_resource type="SphereShape" id=30]
+[sub_resource type="SphereShape" id=28]
 
-[sub_resource type="RectangleShape2D" id=31]
-extents = Vector2( 6.746, 6.79901 )
+[sub_resource type="Animation" id=29]
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
 
-[node name="Room03" type="Spatial"]
-script = ExtResource( 5 )
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource( 1 )
+[node name="Room02" type="Spatial"]
+script = ExtResource( 1 )
 
 [node name="GridMap" type="GridMap" parent="."]
-mesh_library = ExtResource( 1 )
+mesh_library = ExtResource( 25 )
 data = {
-"cells": PoolIntArray( 0, 0, 538181632, 1, 0, 1310720, 2, 0, 1310720, 65535, 0, 1310720, 65536, 0, 1310720, 131071, 0, 538181632, 196607, 0, 1, -65536, 0, 1310721, -65535, 0, 538181633, -65534, 0, 1075052545, -65533, 0, 1310721, -65532, 0, 1310721, -65531, 0, 1310721, 65535, 1, 1310720, 131071, 1, 1310720, 196607, 1, 1, -65536, 1, 1310721, -65535, 1, 1075052545, -65534, 1, 1310721, -65533, 1, 1310721, -65532, 1, 1310721, -65531, 1, -2146172927, 65535, 2, 1310720, 131071, 2, 1310720, 196607, 2, 1, -65536, 2, 1310721, -65535, 2, 1310721, -65534, 2, 1310721, -65533, 2, 1310721, -65532, 2, 1310721, -65531, 2, 1310721, 65535, 3, 1310720, 131071, 3, 1310720, 196607, 3, -2147483647, -65536, 3, 1310721, -65535, 3, -2146172927, -65534, 3, 1310721, -65533, 3, 1310721, -65532, 3, -2146172927, -65531, 3, 1310721, 0, 4, 1310720, 1, 4, 1310720, 65535, 4, 1310720, 65536, 4, -1072431104, 65537, 4, 1075052544, 131071, 4, 1310720, 196607, 4, 1, -65536, 4, 1310721, -65535, 4, 1310721, -65534, 4, 1310721, -65533, 4, -1072431103, -65532, 4, 1310721, -65531, 4, 1310721, -1, 4, 1310721, 65536, 5, 0, 65536, 6, 0, 65536, 7, 0, 65536, 8, 1, 65537, 8, 1, 131071, 8, 1, 65536, 9, 1, 65537, 9, 1, 131071, 9, 1, 65536, 10, 1, 65537, 10, 536870913, 131071, 10, 1, 1, 65535, 1310720, 2, 65535, 1310720, 3, 65535, 1, 4, 65535, 1310720, 5, 65535, 1310720, 65535, 65535, 1310720, 65536, 65535, 1310720, 65537, 65535, 1, 65538, 65535, 1, 65539, 65535, 536870913, 65540, 65535, 1310720, 65541, 65535, 1310720, 131071, 65535, 1310720, 131072, 65535, 1, 131073, 65535, 1310720, 131074, 65535, 1310720, 131075, 65535, 1310720, 131076, 65535, 1310720, 131077, 65535, 1310720, 196607, 65535, 1310720, -65531, 65535, 1310721 )
-}
-__meta__ = {
-"_editor_clip_": 0,
-"_editor_floor_": Vector3( 0, 1, 0 )
-}
-
-[node name="GridMap2" type="GridMap" parent="."]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
-mesh_library = ExtResource( 1 )
-cell_size = Vector3( 1, 1, 1 )
-cell_scale = 0.5
-data = {
-"cells": PoolIntArray( 2, 65533, 0, 3, 65533, 0, 65538, 65533, 0, 65539, 65533, 0, 6, 65535, 0, 7, 65535, 1073741824, 65542, 65535, 0, 65543, 65535, 0 )
-}
-__meta__ = {
-"_editor_clip_": 0,
-"_editor_floor_": Vector3( 0, -7, -3 )
-}
-
-[node name="BoundariesGridmap" type="GridMap" parent="."]
-visible = false
-mesh_library = ExtResource( 1 )
-data = {
-"cells": PoolIntArray( 6, 0, 3, 65542, 0, 3, 131078, 0, 3, 196614, 0, 3, 262143, 0, 3, 6, 1, 3, 65542, 1, 3, 131078, 1, 3, 196614, 1, 3, 262143, 1, 3, 6, 2, 3, 65542, 2, 3, 131078, 2, 3, 196614, 2, 3, 262143, 2, 3, 6, 3, 3, 65542, 3, 3, 131078, 3, 3, 196614, 3, 3, 262143, 3, 3, 6, 4, 3, 65542, 4, 3, 131078, 4, 3, 196614, 4, 3, 262143, 4, 3, 2, 5, 3, 3, 5, 3, 4, 5, 3, 5, 5, 3, 6, 5, 3, 65538, 5, 3, 65539, 5, 3, 65540, 5, 3, 65541, 5, 3, 65542, 5, 3, 131073, 5, 3, 131074, 5, 3, 131075, 5, 3, 131076, 5, 3, 131077, 5, 3, 131078, 5, 3, 196607, 5, 3, 196609, 5, 3, 196610, 5, 3, 196611, 5, 3, 196612, 5, 3, 196613, 5, 3, 196614, 5, 3, 262143, 5, 3, 131073, 6, 3, 196607, 6, 3, 196609, 6, 3, 262143, 6, 3, 131073, 7, 3, 196607, 7, 3, 196609, 7, 3, 262143, 7, 3, 131074, 8, 3, 196606, 8, 3, 196610, 8, 3, 262142, 8, 3, 131074, 9, 3, 196606, 9, 3, 196610, 9, 3, 262142, 9, 3, 131074, 10, 3, 196606, 10, 3, 196610, 10, 3, 262142, 10, 3, 131072, 11, 3, 131073, 11, 3, 196607, 11, 3, 196608, 11, 3, 196609, 11, 3, 262143, 11, 3, 196608, 65535, 3, 196609, 65535, 3, 196610, 65535, 3, 196611, 65535, 3, 196612, 65535, 3, 196613, 65535, 3, 262143, 65535, 3 )
+"cells": PoolIntArray( 1, 0, 983040, 65530, 0, 983040, -65536, 0, 983041, -5, 0, 983041, -4, 0, 983041, -3, 0, 983041, -2, 0, 983041, -1, 0, 983041, 1, 1, 983040, 65527, 1, 983040, 65528, 1, 983040, 65529, 1, 983040, 65530, 1, 983040, -65536, 1, 983041, -5, 1, 983041, -4, 1, 983041, -3, 1, 983041, -2, 1, 983041, -1, 1, 983041, 1, 2, 983040, 65527, 2, 983040, -65536, 2, 983041, -8, 2, 983041, -7, 2, 983041, -6, 2, 983041, -5, 2, 983041, -4, 2, 983041, -3, 2, 983041, -2, 2, 983041, -1, 2, 983041, 1, 3, 983040, 65527, 3, 983040, 65528, 3, 983040, 65529, 3, 983040, 65530, 3, 983040, -65536, 3, 983041, -5, 3, 983041, -4, 3, 983041, -3, 3, 983041, -2, 3, 983041, -1, 3, 983041, 1, 4, 983040, 65530, 4, 983040, -65536, 4, 983041, -5, 4, 983041, -4, 4, 983041, -3, 4, 983041, -2, 4, 983041, -1, 4, 983041, 0, 5, 983040, 1, 5, 983040, 65530, 5, 983040, 65531, 5, 983040, 65532, 5, 983040, 65533, 5, 983040, 65534, 5, 983040, 65535, 5, 983040, 65533, 65533, 1310721, 262138, 65533, 2, 262139, 65533, 2, 65533, 65534, 1310721, 262138, 65534, 2, 262139, 65534, 2, 0, 65535, 983040, 1, 65535, 983040, 65530, 65535, 983040, 65531, 65535, 983040, 65532, 65535, 983040, 65533, 65535, 983040, 65534, 65535, 983040, 65535, 65535, 983040, 65536, 65535, 1310720, 131066, 65535, 1310720, 131067, 65535, 1310720, 131068, 65535, 1310720, 131070, 65535, 1310720, 131071, 65535, 1310720, 196602, 65535, 1310720, 196603, 65535, 1310720, 196604, 65535, 1310720, 196606, 65535, 1310720, 196607, 65535, 1310720, 262138, 65535, 1376256, 262139, 65535, 0, 262140, 65535, 0, 262141, 65535, 1376256, 262142, 65535, 1376256 )
 }
 __meta__ = {
 "_editor_clip_": 0,
 "_editor_floor_": Vector3( 0, 2, 0 )
 }
 
-[node name="Camera" type="Camera" parent="."]
-transform = Transform( 0.707107, -0.40558, 0.579228, 0, 0.819152, 0.573577, -0.707107, -0.40558, 0.579228, 11.376, 10.842, 16.063 )
+[node name="CollisionGridmap" type="GridMap" parent="."]
+visible = false
+mesh_library = ExtResource( 25 )
+data = {
+"cells": PoolIntArray( 65537, 0, 3, 131066, 0, 3, 131073, 0, 3, 196601, 0, 3, 196602, 0, 3, 65537, 1, 3, 131063, 1, 3, 131064, 1, 3, 131065, 1, 3, 131066, 1, 3, 131073, 1, 3, 196599, 1, 3, 196600, 1, 3, 196601, 1, 3, 196602, 1, 3, 65537, 2, 3, 131063, 2, 3, 131073, 2, 3, 196599, 2, 3, 65537, 3, 3, 131063, 3, 3, 131064, 3, 3, 131065, 3, 3, 131066, 3, 3, 131073, 3, 3, 196599, 3, 3, 196600, 3, 3, 196601, 3, 3, 196602, 3, 3, 65537, 4, 3, 131066, 4, 3, 131073, 4, 3, 196602, 4, 3, 65536, 5, 3, 65537, 5, 3, 131066, 5, 3, 131067, 5, 3, 131068, 5, 3, 131069, 5, 3, 131070, 5, 3, 131071, 5, 3, 131072, 5, 3, 131073, 5, 3, 196602, 5, 3, 196603, 5, 3, 196604, 5, 3, 196605, 5, 3, 196606, 5, 3, 196607, 5, 3, 131069, 65532, 3, 196605, 65532, 3, 131068, 65533, 3, 131070, 65533, 3, 196604, 65533, 3, 196606, 65533, 3, 262141, 65533, 3, 131068, 65534, 3, 131070, 65534, 3, 196604, 65534, 3, 196606, 65534, 3, 262141, 65534, 3, 65537, 65535, 3, 131072, 65535, 3, 131073, 65535, 3 )
+}
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_floor_": Vector3( 0, 3, 0 )
+}
+
+[node name="SpringArm" type="SpringArm" parent="."]
+transform = Transform( -1.62921e-07, 0.707107, -0.707107, 0, 0.707107, 0.707107, 1, 1.15202e-07, -1.15202e-07, -4, 0, 5 )
+collision_mask = 0
+spring_length = 50.0
+
+[node name="Camera" type="Camera" parent="SpringArm"]
 projection = 1
 current = true
-size = 20.0
+size = 25.0
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera"]
-"anims/New Anim" = SubResource( 2 )
+[node name="SpringArmTween" type="Tween" parent="SpringArm"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 1 )
 
 [node name="Player" type="KinematicBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0366, 0.52597, 7.18875 )
-input_ray_pickable = false
-script = ExtResource( 3 )
-Walk_Max_Speed = 4.0
-GravityFloorMul = 30.0
+transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -2.40506, 0.621014, 4.86753 )
+script = ExtResource( 2 )
 
 [node name="Collider" type="CollisionShape" parent="Player"]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.833265, 0 )
-shape = SubResource( 3 )
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.94, 0 )
+shape = SubResource( 2 )
 
 [node name="SpringArm" type="SpringArm" parent="Player"]
-transform = Transform( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 2.15391, 4.76837e-07 )
-collision_mask = 0
+transform = Transform( 1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 4.76837e-07, 2.15391, 0 )
 spring_length = 5.0
 margin = 0.3
 
 [node name="Camera" type="Camera" parent="Player/SpringArm"]
+fov = 35.0
 far = 8192.0
 
+[node name="Tween" type="Tween" parent="Player/SpringArm"]
+
 [node name="POLYMAN_ARMATURE" type="Spatial" parent="Player"]
-transform = Transform( 60, 0, 0, 0, 60, 0, 0, 0, 60, 0.00853539, -0.29088, -0.0217509 )
+transform = Transform( 40, 0, 0, 0, 40, 0, 0, 0, 40, -0.0636905, -0.312983, 0.0496175 )
+visible = false
 
 [node name="Armature" type="Spatial" parent="Player/POLYMAN_ARMATURE"]
 
@@ -1765,24 +1729,24 @@ bones/24/enabled = true
 bones/24/bound_children = [  ]
 
 [node name="Mesh" type="MeshInstance" parent="Player/POLYMAN_ARMATURE/Armature/Skeleton"]
-mesh = SubResource( 4 )
-skin = SubResource( 5 )
-material/0 = SubResource( 6 )
+mesh = SubResource( 3 )
+skin = SubResource( 4 )
+material/0 = SubResource( 5 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Player/POLYMAN_ARMATURE"]
-anims/FLOATING01 = SubResource( 7 )
-anims/FLOATING02 = SubResource( 8 )
-anims/IDLE = SubResource( 9 )
-anims/JUMPING01 = SubResource( 10 )
-anims/JUMPING02 = SubResource( 11 )
-anims/RUNNING = SubResource( 12 )
-anims/WALKING = SubResource( 13 )
+anims/FLOATING01 = SubResource( 6 )
+anims/FLOATING02 = SubResource( 7 )
+anims/IDLE = SubResource( 8 )
+anims/JUMPING01 = SubResource( 9 )
+anims/JUMPING02 = SubResource( 10 )
+anims/RUNNING = SubResource( 11 )
+anims/WALKING = SubResource( 12 )
 
 [node name="AnimationTree2" type="AnimationTree" parent="Player/POLYMAN_ARMATURE"]
-tree_root = SubResource( 24 )
+tree_root = SubResource( 23 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/playback = SubResource( 25 )
+parameters/playback = SubResource( 24 )
 parameters/conditions/is_floor = true
 parameters/conditions/is_jump = false
 parameters/conditions/is_not_floor = false
@@ -1790,252 +1754,44 @@ parameters/Moving/blend_position = 0
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Player"]
 transform = Transform( -0.0207155, 0, 0.999785, 0, 1, 0, -0.999785, 0, -0.0207155, -4.29153e-06, 0.989993, 0.0634422 )
-visible = false
-pixel_size = 0.12
+pixel_size = 0.08
 billboard = 1
-frames = SubResource( 26 )
-animation = "IDLE_SIDE"
-frame = 1
+frames = SubResource( 25 )
+animation = "IDLE_DOWN"
 playing = true
 
-[node name="FakePillar" type="Spatial" parent="."]
-
-[node name="Spatial" parent="FakePillar" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 3, 7 )
-
-[node name="Spatial2" parent="FakePillar" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 5, 7 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="FakePillar"]
-anims/FakePillar@Move = SubResource( 27 )
-
 [node name="MagicSphere" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 5, 19.164 )
-mesh = SubResource( 29 )
-material/0 = null
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -5.04176, 2.84716, -4.89518 )
+mesh = SubResource( 27 )
 
 [node name="SphereCollider" type="Area" parent="MagicSphere"]
 
 [node name="CollisionShape" type="CollisionShape" parent="MagicSphere/SphereCollider"]
-shape = SubResource( 30 )
+shape = SubResource( 28 )
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="MagicSphere"]
-stream = ExtResource( 52 )
+stream = ExtResource( 44 )
+unit_size = 70.0
 autoplay = true
+max_distance = 80.0
 
-[node name="ViewportContainer" type="ViewportContainer" parent="."]
-visible = false
+[node name="Control" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-mouse_filter = 2
-stretch = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Node2D2" parent="ViewportContainer" instance=ExtResource( 12 )]
-
-[node name="KinematicBody2D" parent="ViewportContainer/Node2D2" index="0"]
-position = Vector2( 221.635, 290.96 )
-
-[node name="Sprite" parent="ViewportContainer/Node2D2/KinematicBody2D" index="1"]
-texture = ExtResource( 9 )
-
-[node name="Area2D" type="Area2D" parent="ViewportContainer"]
-position = Vector2( 469.254, 333.299 )
-z_index = 1
-
-[node name="TrashbinSprite" type="Sprite" parent="ViewportContainer/Area2D"]
-texture = ExtResource( 8 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ViewportContainer/Area2D"]
-shape = SubResource( 31 )
-
-[node name="Options" type="Control" parent="."]
+[node name="Sprite" type="Sprite" parent="Control"]
 visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-mouse_filter = 2
-theme = ExtResource( 7 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+position = Vector2( 23.0173, 21.4299 )
+texture = ExtResource( 16 )
 
-[node name="Panel" type="Panel" parent="Options"]
-self_modulate = Color( 1, 1, 1, 0.862745 )
-margin_left = 104.561
-margin_top = 75.0
-margin_right = 129.561
-margin_bottom = 100.0
-rect_scale = Vector2( 15.5145, 11.1368 )
-mouse_filter = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="CheckBox" type="CheckBox" parent="Options"]
-margin_left = 178.163
-margin_top = 228.832
-margin_right = 357.163
-margin_bottom = 268.832
-text = "PIXELMAN CAN JUMP"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button" type="Button" parent="Options"]
-margin_left = 411.968
-margin_top = 88.3579
-margin_right = 477.968
-margin_bottom = 109.358
-text = "RETURN"
-
-[node name="Label" type="Label" parent="Options"]
-margin_left = 252.014
-margin_top = 143.469
-margin_right = 318.014
-margin_bottom = 157.469
-text = "PIXELMAN"
-
-[node name="Label2" type="Label" parent="Options"]
-margin_left = 246.669
-margin_top = 214.741
-margin_right = 318.669
-margin_bottom = 229.741
-text = "CAN"
-
-[node name="Label3" type="Label" parent="Options"]
-margin_left = 322.395
-margin_top = 215.632
-margin_right = 394.395
-margin_bottom = 230.632
-text = "NOT"
-
-[node name="Label4" type="Label" parent="Options"]
-margin_left = 284.978
-margin_top = 278.885
-margin_right = 356.978
-margin_bottom = 293.885
-text = "JUMP"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label7" type="Label" parent="Options"]
-margin_left = 304.478
-margin_top = 259.885
-margin_right = 376.478
-margin_bottom = 274.885
-text = "JUMP"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label11" type="Label" parent="Options"]
-margin_left = 162.888
-margin_top = 201.452
-margin_right = 234.888
-margin_bottom = 216.452
-text = "TON"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label8" type="Label" parent="Options"]
-margin_left = 155.978
-margin_top = 137.885
-margin_right = 272.978
-margin_bottom = 152.885
-text = "?????????????"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label5" type="Label" parent="Options"]
-margin_left = 134.808
-margin_top = 322.935
-margin_right = 242.808
-margin_bottom = 337.935
-text = "PIXELMAN CAN"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label6" type="Label" parent="Options"]
-margin_left = 327.025
-margin_top = 296.906
-margin_right = 480.025
-margin_bottom = 311.906
-text = "PIXELCAN MAN JUMP"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label9" type="Label" parent="Options"]
-margin_left = 481.996
-margin_top = 129.336
-margin_right = 634.996
-margin_bottom = 162.336
-rect_rotation = 90.059
-text = "PISH FIL IN 
-JUMPY ISLAND"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label10" type="Label" parent="Options"]
-margin_left = 479.748
-margin_top = 135.33
-margin_right = 632.748
-margin_bottom = 168.33
-rect_rotation = 90.6193
-text = "PISH FIL IN 
-JUMPY ISLAND"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="OptionButton2" type="OptionButton" parent="Options"]
-margin_left = 253.4
-margin_top = 320.193
-margin_right = 390.4
-margin_bottom = 341.193
-text = "????"
-items = [ "????", null, false, 0, null, "JUST DO IT", null, false, 1, null, "OR NOT", null, false, 2, null ]
-selected = 0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="OptionButton" type="OptionButton" parent="Options"]
-margin_left = 222.032
-margin_top = 175.362
-margin_right = 359.032
-margin_bottom = 196.362
-text = "PIXELMAN CAN"
-items = [ "PIXELMAN CAN", null, false, 0, null, "NOT JUMP", null, false, 1, null, "NOT JUMP", null, false, 2, null, "NOT JUMP", null, false, 3, null, "NOT JUMP", null, false, 4, null ]
-selected = 0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Devil" type="Sprite" parent="Options"]
-position = Vector2( 220.251, 290.672 )
-texture = ExtResource( 10 )
-
-[node name="FakeExit" type="Button" parent="Options"]
-margin_left = 229.936
-margin_top = 104.573
-margin_right = 340.936
-margin_bottom = 125.573
-text = "QUIT GAME!!"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/Sprite"]
+anims/Devil@EscapeLaugh = SubResource( 29 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 19.4519 )
-[connection signal="body_entered" from="MagicSphere/SphereCollider" to="." method="_on_SphereCollider_body_entered"]
-[connection signal="body_entered" from="ViewportContainer/Area2D" to="." method="_on_Area2D_body_entered"]
-[connection signal="pressed" from="Options/CheckBox" to="." method="_on_CheckBox_pressed"]
-[connection signal="pressed" from="Options/Button" to="." method="_on_Button_pressed"]
-[connection signal="pressed" from="Options/FakeExit" to="." method="_on_FakeExit_pressed"]
+transform = Transform( -1, 2.30405e-07, -2.30405e-07, 0, 0.707107, 0.707107, 3.25841e-07, 0.707107, -0.707107, 0, 0, -12.1604 )
+light_energy = 1.3
 
-[editable path="ViewportContainer/Node2D2"]
+[connection signal="body_entered" from="MagicSphere/SphereCollider" to="." method="_on_SphereCollider_body_entered"]

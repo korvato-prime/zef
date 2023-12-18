@@ -22,7 +22,7 @@ _global_script_classes=[ {
 "base": "KinematicBody2D",
 "class": "NotDragable",
 "language": "GDScript",
-"path": "res://rooms/DragableBody.gd"
+"path": "res://rooms/dragable_body.gd"
 } ]
 _global_script_class_icons={
 "MainCharacter": "",

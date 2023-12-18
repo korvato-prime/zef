@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Epilogue.png-81de8eb7e179061be79505665b14893f.stex"
+path="res://.import/epilogue.png-42d1abf5f679f63adf0066718052a519.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://rooms/Epilogue.png"
-dest_files=[ "res://.import/Epilogue.png-81de8eb7e179061be79505665b14893f.stex" ]
+source_file="res://rooms/epilogue.png"
+dest_files=[ "res://.import/epilogue.png-42d1abf5f679f63adf0066718052a519.stex" ]
 
 [params]
 

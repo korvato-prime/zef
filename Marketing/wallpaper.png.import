@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/wallpaper.png-f3ffbee8c882cca2eebe78697ef5fd23.stex"
+path="res://.import/wallpaper.png-fcd773fb8df8433a1f72949bbff95ab4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Marketing/wallpaper.png"
-dest_files=[ "res://.import/wallpaper.png-f3ffbee8c882cca2eebe78697ef5fd23.stex" ]
+source_file="res://marketing/wallpaper.png"
+dest_files=[ "res://.import/wallpaper.png-fcd773fb8df8433a1f72949bbff95ab4.stex" ]
 
 [params]
 
@@ -28,6 +28,7 @@ process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
+process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=true

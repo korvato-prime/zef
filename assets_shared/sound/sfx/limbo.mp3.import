@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/limbo.mp3-dc04271b773fb106b4f2fac8c3ce90b1.mp3str"
+
+[deps]
+
+source_file="res://assets_shared/sound/sfx/limbo.mp3"
+dest_files=[ "res://.import/limbo.mp3-dc04271b773fb106b4f2fac8c3ce90b1.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

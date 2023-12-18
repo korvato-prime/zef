@@ -1,8 +1,9 @@
 [gd_scene load_steps=54 format=2]
 
-[ext_resource path="res://Gridmap/MeshLibrary.meshlib" type="MeshLibrary" id=1]
-[ext_resource path="res://Materials/M_HubFloor.tres" type="Material" id=2]
+[ext_resource path="res://assets_shared/gridmaps/MeshLibrary.meshlib" type="MeshLibrary" id=1]
+[ext_resource path="res://rooms/M_HubFloor.tres" type="Material" id=2]
 [ext_resource path="res://Zef/Nueva carpeta/TPTestPlayer.gd" type="Script" id=3]
+
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.35

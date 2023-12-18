@@ -1,11 +1,12 @@
 [gd_scene load_steps=35 format=2]
 
-[ext_resource path="res://Textures/Epilogue.png" type="Texture" id=2]
-[ext_resource path="res://Zef/TPTestPlayer.gd" type="Script" id=3]
-[ext_resource path="res://Rooms/Room05.gd" type="Script" id=6]
-[ext_resource path="res://Textures/Transition.png" type="Texture" id=7]
-[ext_resource path="res://Fonts/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=8]
-[ext_resource path="res://Zef/PolymanWithTree.tres" type="ArrayMesh" id=9]
+[ext_resource path="res://rooms/Epilogue.png" type="Texture" id=2]
+[ext_resource path="res://entities/yellowman/TPTestPlayer.gd" type="Script" id=3]
+[ext_resource path="res://rooms/Room05.gd" type="Script" id=6]
+[ext_resource path="res://interface/Transition.png" type="Texture" id=7]
+[ext_resource path="res://assets_shared/fonts/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://entities/yellowman/PolymanWithTree.tres" type="ArrayMesh" id=9]
+
 
 [sub_resource type="CubeMesh" id=1]
 

@@ -1,12 +1,13 @@
 [gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://Gridmap/MeshLibrary.meshlib" type="MeshLibrary" id=1]
-[ext_resource path="res://Zef/Crosshair.png" type="Texture" id=2]
-[ext_resource path="res://Interactables/FakeGridmap.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Fonts/m5x7.ttf" type="DynamicFontData" id=4]
-[ext_resource path="res://Zef/FPTestPlayer.gd" type="Script" id=5]
-[ext_resource path="res://Rooms/Room04.gd" type="Script" id=6]
-[ext_resource path="res://SFX/limbo.wav" type="AudioStream" id=7]
+[ext_resource path="res://assets_shared/gridmaps/MeshLibrary.meshlib" type="MeshLibrary" id=1]
+[ext_resource path="res://entities/yellowman/Crosshair.png" type="Texture" id=2]
+[ext_resource path="res://rooms/FakeGridmap.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets_shared/fonts/m5x7.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://entities/yellowman/FPTestPlayer.gd" type="Script" id=5]
+[ext_resource path="res://rooms/Room04.gd" type="Script" id=6]
+[ext_resource path="res://assets_shared/sound/sfx/limbo.wav" type="AudioStream" id=7]
+
 
 [sub_resource type="Environment" id=1]
 background_mode = 3

@@ -20,5 +20,5 @@ func play_succes():
 	$AudioStreamPlayer_SFX.play()
 
 func play_start():
-	$AudioStreamPlayer_SFX.stream = load("res://SFX/START.wav")
+	$AudioStreamPlayer_SFX.stream = load("res://assets_shared/sound/sfx/START.wav")
 	$AudioStreamPlayer_SFX.play()

@@ -8,7 +8,7 @@ func _ready():
 	SoundManager.stop_music()
 	LevelManager.current_level = 1
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_pressed("gui_management"):
 		$OptionsPanel.show()
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE) 
@@ -49,7 +49,7 @@ func _on_SphereCollider_body_entered(body):
 		$AnimationPlayer.play("New Anim")
 		Transition.fade_to("res://Rooms/Room02.tscn")
 
-func _on_FirstCameraChangeArea_body_entered(body):			
+func _on_FirstCameraChangeArea_body_entered(_body):
 	var tween = $Player/SpringArm/Tween
 	tween.interpolate_property($Player/SpringArm, "rotation_degrees",
 	$Player/SpringArm.rotation_degrees, Vector3(0,0,0), 1,

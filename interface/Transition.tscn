@@ -3,7 +3,6 @@
 [ext_resource path="res://interface/Transition.gd" type="Script" id=1]
 [ext_resource path="res://interface/Transition.png" type="Texture" id=2]
 
-
 [sub_resource type="Animation" id=1]
 resource_name = "Fade"
 length = 2.0

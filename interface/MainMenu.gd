@@ -5,7 +5,7 @@ func _on_TutorialButton_pressed():
 	$CanvasLayer/Control/VBoxContainer.hide()
 
 func _on_StartButton_pressed():
-	Transition.yellow_fade_to("res://Rooms/Room01.tscn")
+	Transition.yellow_fade_to("res://rooms/room_01.tscn")
 	$CanvasLayer/Control.hide()
 	SoundManager.play_start()
 

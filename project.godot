@@ -44,8 +44,8 @@ default_bus_layout="res://assets_shared/sound/default_bus_layout.tres"
 [autoload]
 
 Transition="*res://interface/Transition.tscn"
-SoundManager="*res://autoloads/SoundManager.tscn"
-LevelManager="*res://autoloads/LevelManager.tscn"
+SoundManager="*res://autoloads/sound_manager.tscn"
+LevelManager="*res://autoloads/level_manager.gd"
 
 [display]
 

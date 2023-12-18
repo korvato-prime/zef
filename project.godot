@@ -34,7 +34,7 @@ _global_script_class_icons={
 
 config/name="ZEF"
 run/main_scene="res://interface/MainMenu.tscn"
-boot_splash/image="res://marketing/wallpaper.png"
+boot_splash/image="res://_marketing/wallpaper.png"
 config/icon="res://icon.png"
 
 [audio]
